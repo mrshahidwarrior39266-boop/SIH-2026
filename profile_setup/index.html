@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillBridge — Profile Setup</title>
+  <meta name="description" content="Complete your SkillBridge profile to access your personalized portal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#050b18;--bg-card:rgba(255,255,255,0.05);--bg-card-h:rgba(255,255,255,0.09);
+      --border:rgba(255,255,255,0.09);--border-h:rgba(255,255,255,0.2);
+      --text:#f0f4ff;--text-sec:#8a9bbf;--text-muted:#4a5a7a;
+      --indigo:#6366f1;--blue:#3b82f6;--emerald:#10b981;--amber:#f59e0b;--rose:#f43f5e;
+      --r:16px;--tr:all 0.3s cubic-bezier(0.4,0,0.2,1)
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px;overflow-x:hidden}
+    /* Aurora */
+    .aurora{position:fixed;inset:0;z-index:0;pointer-events:none}
+    .aurora::before{content:'';position:absolute;width:800px;height:800px;top:-200px;left:-200px;background:radial-gradient(circle,rgba(99,102,241,0.1) 0%,transparent 70%);animation:a1 18s ease-in-out infinite alternate}
+    .aurora::after{content:'';position:absolute;width:600px;height:600px;bottom:-100px;right:-100px;background:radial-gradient(circle,rgba(16,185,129,0.08) 0%,transparent 70%);animation:a2 22s ease-in-out infinite alternate}
+    @keyframes a1{from{transform:translate(0,0)}to{transform:translate(60px,40px)}}
+    @keyframes a2{from{transform:translate(0,0)}to{transform:translate(-50px,-30px)}}
+    /* Card */
+    .card{position:relative;z-index:1;width:100%;max-width:680px;background:var(--bg-card);border:1px solid var(--border);border-radius:24px;padding:48px;animation:fadeUp 0.6s ease both}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+    /* Logo bar */
+    .logo-bar{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:40px}
+    .logo-icon{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,#6366f1,#3b82f6);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff;letter-spacing:-1px;box-shadow:0 0 18px rgba(99,102,241,0.4)}
+    .logo-name{font-size:20px;font-weight:800;background:linear-gradient(90deg,#fff,#a5b4fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    /* Progress */
+    .progress-wrap{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:40px}
+    .step-dot{display:flex;align-items:center;gap:12px}
+    .dot{width:36px;height:36px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--text-muted);transition:var(--tr);flex-shrink:0}
+    .dot.active{border-color:var(--indigo);background:var(--indigo);color:#fff;box-shadow:0 0 16px rgba(99,102,241,0.4)}
+    .dot.done{border-color:#10b981;background:#10b981;color:#fff}
+    .dot.done::after{content:'✓'}
+    .connector{width:40px;height:2px;background:var(--border);border-radius:1px;transition:var(--tr)}
+    .connector.done{background:var(--indigo)}
+    .step-label{font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-top:6px;text-align:center;transition:var(--tr)}
+    .step-label.active{color:var(--indigo)}
+    /* Titles */
+    .step-title{font-size:26px;font-weight:800;letter-spacing:-0.5px;text-align:center;margin-bottom:10px}
+    .step-sub{font-size:14px;color:var(--text-sec);text-align:center;margin-bottom:32px;line-height:1.6}
+    /* Role Cards Grid */
+    .role-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px}
+    .role-card{padding:24px 20px;border:2px solid var(--border);border-radius:var(--r);cursor:pointer;transition:var(--tr);display:flex;flex-direction:column;align-items:flex-start;gap:10px;background:transparent;color:inherit;text-align:left;width:100%}
+    .role-card:hover{border-color:var(--border-h);background:var(--bg-card-h)}
+    .role-card.selected-student   {border-color:#818cf8;background:rgba(99,102,241,0.1);box-shadow:0 0 0 1px rgba(99,102,241,0.3)}
+    .role-card.selected-recruiter {border-color:#34d399;background:rgba(16,185,129,0.1);box-shadow:0 0 0 1px rgba(16,185,129,0.3)}
+    .role-card.selected-faculty   {border-color:#fbbf24;background:rgba(245,158,11,0.1);box-shadow:0 0 0 1px rgba(245,158,11,0.3)}
+    .role-card.selected-institution{border-color:#fb7185;background:rgba(244,63,94,0.1);box-shadow:0 0 0 1px rgba(244,63,94,0.3)}
+    .role-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+    .role-icon .material-symbols-outlined{font-size:24px}
+    .ri-student   {background:rgba(99,102,241,0.15);color:#818cf8}
+    .ri-recruiter {background:rgba(16,185,129,0.15);color:#34d399}
+    .ri-faculty   {background:rgba(245,158,11,0.15);color:#fbbf24}
+    .ri-institution{background:rgba(244,63,94,0.15);color:#fb7185}
+    .role-name{font-size:15px;font-weight:700;letter-spacing:-0.2px}
+    .role-desc{font-size:12px;color:var(--text-sec);line-height:1.5}
+    /* Form */
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+    .form-field{display:flex;flex-direction:column;gap:6px}
+    .form-field.full{grid-column:1/-1}
+    label{font-size:12px;font-weight:600;color:var(--text-sec);letter-spacing:0.04em;text-transform:uppercase}
+    input,select,textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;background:rgba(255,255,255,0.06);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;outline:none;transition:var(--tr);position:relative;z-index:20;pointer-events:auto !important;cursor:text}
+    select{cursor:pointer}
+    input:focus,select:focus,textarea:focus{border-color:var(--indigo);background:rgba(99,102,241,0.12);box-shadow:0 0 0 3px rgba(99,102,241,0.25)}
+    select option{background:#1a2035;color:#f0f4ff}
+    input::placeholder,textarea::placeholder{color:var(--text-muted)}
+    /* Skills tags */
+    .skill-wrap{display:flex;flex-wrap:wrap;gap:8px;padding:10px;border:1.5px solid var(--border);border-radius:10px;background:rgba(255,255,255,0.06);min-height:48px;cursor:text;transition:var(--tr);position:relative;z-index:20;pointer-events:auto !important}
+    .skill-wrap:focus-within{border-color:var(--indigo);background:rgba(99,102,241,0.12);box-shadow:0 0 0 3px rgba(99,102,241,0.25)}
+    .skill-tag{display:flex;align-items:center;gap:4px;padding:3px 10px;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);border-radius:50px;font-size:12px;font-weight:600;color:#818cf8}
+    .skill-tag button{background:none;border:none;color:#818cf8;cursor:pointer;display:flex;align-items:center;font-size:14px;line-height:1;padding:0}
+    .skill-input{border:none;background:transparent;outline:none;color:var(--text);font-size:13px;min-width:80px;flex:1;position:relative;z-index:20;pointer-events:auto !important}
+    /* Buttons */
+    .btn-primary{width:100%;padding:13px;border-radius:12px;background:linear-gradient(135deg,#6366f1,#3b82f6);color:#fff;font-size:15px;font-weight:700;border:none;cursor:pointer;transition:var(--tr);letter-spacing:0.01em;display:flex;align-items:center;justify-content:center;gap:8px;position:relative;z-index:20;pointer-events:auto !important}
+    .btn-primary:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 8px 24px rgba(99,102,241,0.3)}
+    .btn-primary:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+    .btn-secondary{width:100%;padding:12px;border-radius:12px;border:1.5px solid var(--border);background:transparent;color:var(--text-sec);font-size:14px;font-weight:600;cursor:pointer;transition:var(--tr);margin-top:12px}
+    .btn-secondary:hover{border-color:var(--border-h);color:var(--text)}
+    /* Error */
+    .error-msg{color:#fb7185;font-size:13px;text-align:center;margin-bottom:12px;padding:10px 16px;background:rgba(244,63,94,0.08);border:1px solid rgba(244,63,94,0.2);border-radius:10px;display:none}
+    .error-msg.show{display:block}
+    /* Success */
+    .success-view{text-align:center;padding:20px 0}
+    .success-icon{width:72px;height:72px;border-radius:50%;background:rgba(16,185,129,0.15);border:2px solid #10b981;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 0 32px rgba(16,185,129,0.25)}
+    .success-icon .material-symbols-outlined{font-size:36px;color:#34d399}
+    /* Spinner */
+    .spinner{display:inline-block;width:18px;height:18px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:spin 0.7s linear infinite;flex-shrink:0}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    /* Step views */
+    .step-view{display:none}
+    .step-view.active{display:block}
+    /* Responsive */
+    @media(max-width:560px){.card{padding:32px 24px}.role-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <div class="card">
+    <!-- Logo -->
+    <div class="logo-bar">
+      <div class="logo-icon">SB</div>
+      <span class="logo-name">SkillBridge</span>
+    </div>
+
+    <!-- Progress indicator -->
+    <div class="progress-wrap" id="progress-bar">
+      <div style="display:flex;flex-direction:column;align-items:center">
+        <div class="dot active" id="dot-1">1</div>
+        <div class="step-label active" id="lbl-1">Role</div>
+      </div>
+      <div class="connector" id="con-1"></div>
+      <div style="display:flex;flex-direction:column;align-items:center">
+        <div class="dot" id="dot-2">2</div>
+        <div class="step-label" id="lbl-2">Profile</div>
+      </div>
+      <div class="connector" id="con-2"></div>
+      <div style="display:flex;flex-direction:column;align-items:center">
+        <div class="dot" id="dot-3">3</div>
+        <div class="step-label" id="lbl-3">Launch</div>
+      </div>
+    </div>
+
+    <!-- Error message (shared) -->
+    <div class="error-msg" id="error-msg"></div>
+
+    <!-- STEP 1: Choose Role -->
+    <div class="step-view active" id="step-1">
+      <h1 class="step-title">Choose Your Role</h1>
+      <p class="step-sub">Select the role that best describes you. This personalizes your dashboard and experience.</p>
+      <div class="role-grid">
+        <button class="role-card" data-role="student" id="role-student" onclick="selectRole('student')" type="button">
+          <div class="role-icon ri-student"><span class="material-symbols-outlined">school</span></div>
+          <div class="role-name">Student</div>
+          <div class="role-desc">B.Tech / M.Tech / MBA students seeking internships, skill assessments, and placement support.</div>
+        </button>
+        <button class="role-card" data-role="recruiter" id="role-recruiter" onclick="selectRole('recruiter')" type="button">
+          <div class="role-icon ri-recruiter"><span class="material-symbols-outlined">corporate_fare</span></div>
+          <div class="role-name">Industry Recruiter</div>
+          <div class="role-desc">Corporate HR or talent acquisition professionals hiring from academia.</div>
+        </button>
+        <button class="role-card" data-role="faculty" id="role-faculty" onclick="selectRole('faculty')" type="button">
+          <div class="role-icon ri-faculty"><span class="material-symbols-outlined">biotech</span></div>
+          <div class="role-name">Faculty / R&D</div>
+          <div class="role-desc">Professors, researchers, and HODs managing grants, FDPs, and student mentorship.</div>
+        </button>
+        <button class="role-card" data-role="institution" id="role-institution" onclick="selectRole('institution')" type="button">
+          <div class="role-icon ri-institution"><span class="material-symbols-outlined">analytics</span></div>
+          <div class="role-name">Institution / TPO</div>
+          <div class="role-desc">Deans, Directors, and TPO heads managing placement, NAAC/NBA, and MoUs.</div>
+        </button>
+      </div>
+      <button class="btn-primary" onclick="goToStep2()" id="btn-step1">
+        <span>Continue</span>
+        <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+      </button>
+    </div>
+
+    <!-- STEP 2: Fill Profile Info -->
+    <div class="step-view" id="step-2">
+      <h1 class="step-title" id="step2-title">Your Profile</h1>
+      <p class="step-sub" id="step2-sub">Fill in your details to personalize your SkillBridge experience.</p>
+
+      <!-- STUDENT FORM -->
+      <div id="form-student" style="display:none">
+        <div class="form-grid">
+          <div class="form-field full">
+            <label for="s-institution">Institution / College Name</label>
+            <input type="text" id="s-institution" placeholder="e.g. IIT Delhi, VIT Vellore" />
+          </div>
+          <div class="form-field">
+            <label for="s-dept">Department</label>
+            <input type="text" id="s-dept" placeholder="e.g. CSE, ECE" />
+          </div>
+          <div class="form-field">
+            <label for="s-year">Year of Study</label>
+            <select id="s-year">
+              <option value="">Select year</option>
+              <option value="1">1st Year</option>
+              <option value="2">2nd Year</option>
+              <option value="3">3rd Year</option>
+              <option value="4">4th Year (Final)</option>
+              <option value="5">5th Year</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="s-cgpa">CGPA / GPA</label>
+            <input type="number" id="s-cgpa" placeholder="e.g. 8.5" min="0" max="10" step="0.01" />
+          </div>
+          <div class="form-field">
+            <label for="s-sid">Student / Roll Number</label>
+            <input type="text" id="s-sid" placeholder="e.g. 2021CSE0042" />
+          </div>
+          <div class="form-field">
+            <label for="s-linkedin">LinkedIn URL (optional)</label>
+            <input type="url" id="s-linkedin" placeholder="https://linkedin.com/in/..." />
+          </div>
+          <div class="form-field">
+            <label for="s-github">GitHub URL (optional)</label>
+            <input type="url" id="s-github" placeholder="https://github.com/..." />
+          </div>
+          <div class="form-field full">
+            <label>Skills (press Enter or comma to add)</label>
+            <div class="skill-wrap" id="skill-wrap" onclick="document.getElementById('skill-input').focus()">
+              <input class="skill-input" id="skill-input" placeholder="Type a skill and press Enter..." />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECRUITER FORM -->
+      <div id="form-recruiter" style="display:none">
+        <div class="form-grid">
+          <div class="form-field full">
+            <label for="r-company">Company Name</label>
+            <input type="text" id="r-company" placeholder="e.g. Cognizant, TCS, Google" />
+          </div>
+          <div class="form-field">
+            <label for="r-designation">Designation</label>
+            <input type="text" id="r-designation" placeholder="e.g. Head of Talent Acquisition" />
+          </div>
+          <div class="form-field">
+            <label for="r-website">Company Website (optional)</label>
+            <input type="url" id="r-website" placeholder="https://company.com" />
+          </div>
+          <div class="form-field full">
+            <label for="r-linkedin">LinkedIn Profile URL (optional)</label>
+            <input type="url" id="r-linkedin" placeholder="https://linkedin.com/in/..." />
+          </div>
+          <div class="form-field full">
+            <label>Hiring Domains (press Enter or comma to add)</label>
+            <div class="skill-wrap" id="domain-wrap" onclick="document.getElementById('domain-input').focus()">
+              <input class="skill-input" id="domain-input" placeholder="e.g. Cloud Backend, ML, DevOps..." />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FACULTY FORM -->
+      <div id="form-faculty" style="display:none">
+        <div class="form-grid">
+          <div class="form-field full">
+            <label for="f-institution">Institution Name</label>
+            <input type="text" id="f-institution" placeholder="e.g. BITS Pilani, Anna University" />
+          </div>
+          <div class="form-field">
+            <label for="f-dept">Department</label>
+            <input type="text" id="f-dept" placeholder="e.g. CSE, Mechanical" />
+          </div>
+          <div class="form-field">
+            <label for="f-designation">Designation</label>
+            <input type="text" id="f-designation" placeholder="e.g. Assistant Professor, HOD" />
+          </div>
+          <div class="form-field full">
+            <label for="f-spec">Research Specialization</label>
+            <input type="text" id="f-spec" placeholder="e.g. Quantum Computing, Computer Vision" />
+          </div>
+          <div class="form-field">
+            <label for="f-scholar">Google Scholar URL (optional)</label>
+            <input type="url" id="f-scholar" placeholder="https://scholar.google.com/..." />
+          </div>
+          <div class="form-field">
+            <label for="f-orcid">ORCID iD (optional)</label>
+            <input type="text" id="f-orcid" placeholder="0000-0000-0000-0000" />
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTITUTION FORM -->
+      <div id="form-institution" style="display:none">
+        <div class="form-grid">
+          <div class="form-field full">
+            <label for="i-institution">Institution Name</label>
+            <input type="text" id="i-institution" placeholder="e.g. Apex Institute of Technology" />
+          </div>
+          <div class="form-field">
+            <label for="i-role">Your Role / Title</label>
+            <input type="text" id="i-role" placeholder="e.g. Dean, TPO Head, Director" />
+          </div>
+          <div class="form-field">
+            <label for="i-city">City</label>
+            <input type="text" id="i-city" placeholder="e.g. Pune, Chennai" />
+          </div>
+          <div class="form-field">
+            <label for="i-naac">NAAC Grade</label>
+            <select id="i-naac">
+              <option value="">Select grade</option>
+              <option>A++</option><option>A+</option><option>A</option>
+              <option>B++</option><option>B+</option><option>B</option>
+              <option>C</option><option>D</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="i-nirf">NIRF Rank (optional)</label>
+            <input type="number" id="i-nirf" placeholder="e.g. 48" min="1" />
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="submitProfile()" id="btn-submit">
+        <span>Save & Continue</span>
+        <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+      </button>
+      <button class="btn-secondary" onclick="goToStep(1)">Back</button>
+    </div>
+
+    <!-- STEP 3: Success -->
+    <div class="step-view" id="step-3">
+      <div class="success-view">
+        <div class="success-icon">
+          <span class="material-symbols-outlined">check_circle</span>
+        </div>
+        <h1 class="step-title" style="margin-bottom:12px">You&apos;re all set!</h1>
+        <p class="step-sub" style="margin-bottom:32px">Your profile has been saved. Launching your personalized <strong id="launch-role-name" style="color:#818cf8">dashboard</strong>...</p>
+        <div style="display:flex;justify-content:center;margin-bottom:24px">
+          <div class="spinner" style="width:32px;height:32px;border-width:3px"></div>
+        </div>
+        <button class="btn-primary" onclick="launchDashboard()" id="btn-launch">
+          <span class="material-symbols-outlined" style="font-size:18px">rocket_launch</span>
+          <span>Launch Dashboard Now</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../shared/auth.js"></script>
+  <script>
+    const API = 'http://localhost:3001/api';
+    let selectedRole = null;
+    let skills = [];
+    let domains = [];
+
+    // ─ Check auth on load ─────────────────────────────────────────
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!window.SBAuth || !window.SBAuth.isLoggedIn()) {
+        window.location.href = '../index.html';
+        return;
+      }
+      // Pre-fill name from token
+      const user = window.SBAuth.getUser();
+      if (user && user.role && user.profileComplete) {
+        // Already set up — redirect to dashboard
+        window.SBAuth.redirectToDashboard(user.role);
+      }
+      initSkillInput();
+      initDomainInput();
+    });
+
+    // ─ Role selection ─────────────────────────────────────────
+    function selectRole(role) {
+      selectedRole = role;
+      document.querySelectorAll('.role-card').forEach(c => {
+        c.className = 'role-card';
+      });
+      document.getElementById('role-' + role).className = 'role-card selected-' + role;
+    }
+
+    function goToStep2() {
+      if (!selectedRole) {
+        showError('Please select your role to continue.');
+        return;
+      }
+      hideError();
+      // Show appropriate form
+      ['student','recruiter','faculty','institution'].forEach(r => {
+        document.getElementById('form-' + r).style.display = (r === selectedRole) ? 'block' : 'none';
+      });
+      const titles = {
+        student:     'Student Details',
+        recruiter:   'Recruiter Details',
+        faculty:     'Faculty Details',
+        institution: 'Institution Details',
+      };
+      document.getElementById('step2-title').textContent = titles[selectedRole] || 'Your Profile';
+      goToStep(2);
+    }
+
+    function goToStep(n) {
+      [1,2,3].forEach(i => {
+        document.getElementById('step-'+i).classList.toggle('active', i === n);
+        const dot = document.getElementById('dot-'+i);
+        const lbl = document.getElementById('lbl-'+i);
+        if (i < n)  { dot.className = 'dot done'; dot.textContent = ''; lbl.className = 'step-label'; }
+        if (i === n){ dot.className = 'dot active'; dot.textContent = i; lbl.className = 'step-label active'; }
+        if (i > n)  { dot.className = 'dot'; dot.textContent = i; lbl.className = 'step-label'; }
+      });
+      [1,2].forEach(i => {
+        const con = document.getElementById('con-'+i);
+        if (con) con.className = 'connector' + (i < n ? ' done' : '');
+      });
+      hideError();
+    }
+
+    // ─ Submit profile ─────────────────────────────────────────
+    async function submitProfile() {
+      hideError();
+      const btn = document.getElementById('btn-submit');
+      btn.disabled = true;
+      btn.innerHTML = '<div class="spinner"></div><span>Saving...</span>';
+
+      let body = { role: selectedRole };
+
+      if (selectedRole === 'student') {
+        body = { ...body,
+          institution: v('s-institution'), department: v('s-dept'),
+          year: parseInt(v('s-year')) || null, cgpa: parseFloat(v('s-cgpa')) || null,
+          student_id: v('s-sid'), linkedin: v('s-linkedin'), github: v('s-github'),
+          skills,
+        };
+        if (!body.institution || !body.department || !body.year) {
+          showError('Please fill in Institution, Department, and Year of Study.');
+          resetBtn(btn); return;
+        }
+      } else if (selectedRole === 'recruiter') {
+        body = { ...body,
+          company: v('r-company'), designation: v('r-designation'),
+          linkedin: v('r-linkedin'), website: v('r-website'), domains,
+        };
+        if (!body.company || !body.designation) {
+          showError('Please fill in Company Name and Designation.');
+          resetBtn(btn); return;
+        }
+      } else if (selectedRole === 'faculty') {
+        body = { ...body,
+          institution: v('f-institution'), department: v('f-dept'),
+          designation: v('f-designation'), specialization: v('f-spec'),
+          scholar_url: v('f-scholar'), orcid: v('f-orcid'),
+        };
+        if (!body.institution || !body.department || !body.designation) {
+          showError('Please fill in Institution, Department, and Designation.');
+          resetBtn(btn); return;
+        }
+      } else if (selectedRole === 'institution') {
+        body = { ...body,
+          institution: v('i-institution'), role_title: v('i-role'),
+          city: v('i-city'), naac_grade: v('i-naac'),
+          nirf_rank: parseInt(v('i-nirf')) || null,
+        };
+        if (!body.institution || !body.role_title) {
+          showError('Please fill in Institution Name and your Role / Title.');
+          resetBtn(btn); return;
+        }
+      }
+
+      try {
+        const token = window.SBAuth.getToken();
+        const res = await fetch(`${API}/profile`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+          body: JSON.stringify(body),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Failed to save profile.');
+
+        // Update stored token with new one (has role + profileComplete)
+        window.SBAuth.setToken(data.token);
+
+        // Show success
+        const roleNames = { student:'Student Hub', recruiter:'Recruiter Hub', faculty:'Faculty Portal', institution:'TPO Dashboard' };
+        document.getElementById('launch-role-name').textContent = roleNames[selectedRole] || 'Dashboard';
+        goToStep(3);
+
+        // Auto-redirect after 2.5s
+        setTimeout(launchDashboard, 2500);
+      } catch(err) {
+        showError(err.message);
+        resetBtn(btn);
+      }
+    }
+
+    function launchDashboard() {
+      const user = window.SBAuth.getUser();
+      window.SBAuth.redirectToDashboard(user ? user.role : selectedRole);
+    }
+
+    // ─ Tag inputs ─────────────────────────────────────────
+    function initSkillInput() {
+      makeTagInput('skill-input', 'skill-wrap', skills);
+    }
+    function initDomainInput() {
+      makeTagInput('domain-input', 'domain-wrap', domains);
+    }
+    function makeTagInput(inputId, wrapId, arr) {
+      const input = document.getElementById(inputId);
+      const wrap  = document.getElementById(wrapId);
+      if (!input || !wrap) return;
+      input.addEventListener('keydown', e => {
+        if ((e.key === 'Enter' || e.key === ',') && input.value.trim()) {
+          e.preventDefault();
+          const val = input.value.replace(/,/g,'').trim();
+          if (val && !arr.includes(val)) {
+            arr.push(val);
+            renderTag(val, arr, wrapId, inputId);
+          }
+          input.value = '';
+        }
+        if (e.key === 'Backspace' && !input.value && arr.length) {
+          arr.pop();
+          const tags = wrap.querySelectorAll('.skill-tag');
+          if (tags.length) tags[tags.length - 1].remove();
+        }
+      });
+    }
+    function renderTag(val, arr, wrapId, inputId) {
+      const wrap  = document.getElementById(wrapId);
+      const input = document.getElementById(inputId);
+      const tag   = document.createElement('div');
+      tag.className = 'skill-tag';
+      tag.innerHTML = `<span>${val}</span><button type="button" onclick="removeTag(this, '${val}', ${JSON.stringify(arr)}, '${wrapId}', '${inputId}')"><span class='material-symbols-outlined' style='font-size:14px'>close</span></button>`;
+      wrap.insertBefore(tag, input);
+    }
+    function removeTag(btn, val, arr, wrapId, inputId) {
+      // Find and remove from appropriate array
+      const target = arr === skills ? skills : domains;
+      const idx = target.indexOf(val);
+      if (idx > -1) target.splice(idx, 1);
+      btn.parentElement.remove();
+    }
+
+    // ─ Helpers ─────────────────────────────────────────
+    function v(id) { return (document.getElementById(id) || {}).value || ''; }
+    function showError(msg) {
+      const el = document.getElementById('error-msg');
+      el.textContent = msg;
+      el.classList.add('show');
+    }
+    function hideError() { document.getElementById('error-msg').classList.remove('show'); }
+    function resetBtn(btn) {
+      btn.disabled = false;
+      btn.innerHTML = '<span>Save & Continue</span><span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c7c4d8", "inverse-on-surface": "#eef0ff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-background": "#131b2e", "on-primary-fixed": "#0f0069", "error": "#ba1a1a", "secondary-container": "#86f2e4", "inverse-surface": "#283044", "inverse-primary": "#c3c0ff", "on-error-container": "#93000a", "outline": "#777587", "secondary-fixed-dim": "#6bd8cb", "primary-container": "#4f46e5", "surface-container-lowest": "#ffffff", "secondary-fixed": "#89f5e7", "surface-container-highest": "#dae2fd", "surface-tint": "#4d44e3", "surface-dim": "#d2d9f4", "tertiary": "#004c76", "primary-fixed": "#e2dfff", "secondary": "#006a61", "surface-variant": "#dae2fd", "surface-container": "#eaedff", "on-secondary-fixed": "#00201d", "surface-bright": "#faf8ff", "primary-fixed-dim": "#c3c0ff", "background": "#faf8ff", "on-surface": "#131b2e", "tertiary-container": "#00659a", "on-primary-fixed-variant": "#3323cc", "on-secondary-container": "#006f66", "primary": "#3525cd", "surface-container-high": "#e2e7ff", "on-tertiary": "#ffffff", "on-surface-variant": "#464555", "on-secondary-fixed-variant": "#005049", "on-tertiary-container": "#bedfff", "on-tertiary-fixed-variant": "#004b73", "on-primary": "#ffffff", "surface": "#faf8ff", "tertiary-fixed": "#cce5ff", "tertiary-fixed-dim": "#93ccff", "on-tertiary-fixed": "#001d31", "on-primary-container": "#dad7ff", "on-error": "#ffffff", "surface-container-low": "#f2f3ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-tablet": "1rem", "gutter-mobile": "0.75rem", "space-2xs": "0.25rem", "margin-mobile": "1rem", "container-max": "1440px", "space-md": "1rem", "space-xl": "2rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "space-2xl": "3rem", "gutter-desktop": "1.5rem", "margin-desktop": "2rem", "space-3xl": "4rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "data-mono": ["JetBrains Mono"], "headline-md": ["Inter"], "display-lg": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "title-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "data-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-surface-container-high py-1 px-margin-desktop text-center text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>Smart India Hackathon 2026 Demo Mode • Live Data Active</span></div><div class="h-20 max-w-container-max mx-auto px-margin-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md shrink-0"><img alt="SkillBridge Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vtb0bo0ZiQfb10ngN-iZsavE7I4YMuRg6hNS5YvDiiVecaB29kE6NQDrSmvLOKTvvMZvToRMUnvye79sfj8O6atOmkYove-haONv3TXTCY_eocVobF_MUJlYQHmta04wymi3VBsR17_YacKVfjvtVXCeGlvM_DWfMhrKjc1VTmBeNk4xUM3BUEN12-aifHt9OK9zjVgvhpyn9CcBwmzu2gNsVIWJleSm6w-zhcEEmbbVgIS-P04O6udyg"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-bold tracking-tight">SkillBridge</span><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full">SIH 2026 Finalist</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Academia • Industry Portal</span></div></div><nav class="hidden xl:flex items-center gap-space-xs shrink-0" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" data-path="student-hub" href="../student_dashboard_skill_gap_hub/code.html">Student Hub</a><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" data-path="industry-partner" href="../industry_recruiter_matching_engine/code.html">Industry Partner</a><a aria-current="page" class="transition-colors px-3 py-2 bg-surface-container-high text-on-surface font-semibold rounded-lg" data-path="faculty-and-rd" href="#">Faculty &amp; R&amp;D</a><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" data-path="institution-analytics" href="../institution_analytics_tpo_intelligence/code.html">Institution Analytics</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="hidden md:flex items-center bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface-variant gap-space-xs"><span class="material-symbols-outlined text-sm">search</span><span class="font-body-sm text-body-sm text-outline">Search skills, internships...</span><kbd class="bg-surface-container text-on-surface-variant font-data-mono text-data-mono px-1.5 py-0.5 rounded">⌘K</kbd></div><div id="sb-role-pill" class="flex items-center gap-space-2xs bg-surface-container px-2.5 py-1.5 rounded-lg text-on-surface font-label-sm text-label-sm cursor-pointer hover:bg-surface-container-high transition-colors"><span class="font-semibold">Role:</span><span class="text-primary-container font-semibold">Student</span><span class="material-symbols-outlined text-sm">expand_more</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg hover:bg-surface-container transition-colors text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-base">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-on-error font-data-mono text-[10px] rounded-full flex items-center justify-center font-bold">3</span></button><div id="sb-user-area" class="flex items-center gap-space-xs pl-space-xs border-l border-surface-container-high"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5u40Xc6bmyTj1TLOC8oUVTQ0LRgkEOcxwNWwiJokVm6akAL-FKpeTlOopg8CgSEWAJ2ryvGIHhP-cM54-jvA19P4QEcE9wDTA4DPyX_C09J3hAti0x8YKg2O4GB6ALjQnKS8sNRCmb-UOzmGg61um_d2rbkJAjNcBbehONtg6Uy6PWi9gx6qz6spd4GMPmrjlVcuKFZJofgakdzSboTZ4Lup0FrWtJzauWC8Kps0my1Ws4Y7hvtYduw"/><span class="material-symbols-outlined absolute -bottom-1 -right-1 text-[12px] bg-secondary text-on-secondary rounded-full p-0.5">verified</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Aarav Sharma</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">IIT Delhi • B.Tech</span></div><span class="material-symbols-outlined text-sm text-on-surface-variant cursor-pointer">arrow_drop_down</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full pb-space-3xl">
+<!-- 0. Data Input & Dynamic Graph Calculator Panel -->
+<div class="max-w-container-max mx-auto px-margin-desktop w-full pt-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm border border-amber-500/30">
+  <div class="flex items-center justify-between cursor-pointer" onclick="document.getElementById('faculty-input-form').classList.toggle('hidden')">
+    <div class="flex items-center gap-space-xs">
+      <span class="material-symbols-outlined text-amber-500 text-xl">tune</span>
+      <h3 class="font-title-md text-title-md font-bold text-on-surface">Faculty Data Entry &amp; Live Graph Calculator</h3>
+      <span class="bg-amber-100 text-amber-900 font-data-mono text-data-mono px-2 py-0.5 rounded font-semibold">Enter Your Data Below</span>
+    </div>
+    <div class="flex items-center gap-2 text-amber-600 font-label-md font-semibold">
+      <span>Edit Parameters</span>
+      <span class="material-symbols-outlined text-sm">expand_more</span>
+    </div>
+  </div>
+  <div id="faculty-input-form" class="mt-space-md pt-space-md border-t border-surface-container-high grid grid-cols-1 md:grid-cols-3 gap-space-md">
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">FACULTY NAME</label>
+      <input type="text" id="inp-fac-name" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="e.g. Dr. K. Raman"/>
+    </div>
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">DEPARTMENT / INSTITUTION</label>
+      <input type="text" id="inp-fac-dept" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="Computer Science &amp; Engineering"/>
+    </div>
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">ACTIVE R&amp;D CAPITAL (₹ LAKHS)</label>
+      <input type="number" step="0.1" id="inp-fac-capital" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="42.5"/>
+    </div>
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">NAAC 6.3 SCORE (0-100)</label>
+      <input type="number" min="0" max="100" id="inp-fac-naac" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="94"/>
+    </div>
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">STUDENT MENTEES COUNT</label>
+      <input type="number" id="inp-fac-mentees" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="18"/>
+    </div>
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">SYLLABUS ALIGNMENT %</label>
+      <input type="number" min="0" max="100" id="inp-fac-syllabus" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="81.4"/>
+    </div>
+    <div class="md:col-span-3 flex justify-end">
+      <button onclick="applyFacultyDataInputs()" class="bg-amber-600 text-white font-label-md px-6 py-2.5 rounded-lg font-bold shadow hover:bg-amber-700 transition-colors flex items-center gap-2">
+        <span class="material-symbols-outlined text-base">analytics</span>
+        Calculate Faculty Graphs Live
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Top Academic Context Banner -->
+<div class="w-full bg-surface-container-low px-margin-desktop py-space-lg mt-space-md">
+<div class="max-w-container-max mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="relative shrink-0">
+<img class="w-20 h-20 rounded-xl object-cover shadow-sm" data-alt="Distinguished South Asian senior academic professor wearing formal blazer and glasses smiling in a modern university computer engineering laboratory setting with books and monitors in background, corporate academic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDxCQ6MzXTZvzhi3N-mJXKzUnpfUG8vBNPb86ikVuuAXNKh2Hqj8nXkMLJE5Xl3wE_3Frwdy0ovN97AsN0b95d2lkGcqJViA_F8UnZHVmnCoO6GXsYIKQWl07JJUSpbLdX260f0Mdqgl30y86UP78do7ZX4kv3dkpbUhR_PSHzEcXFIcbMnk-Puo1LZEfjNQUh8S7Ppul3CjqsKnFWWyd7htCtKQ4bWl6efaYLQ-wsfpPYtcZFa6I1rQ"/>
+<span class="material-symbols-outlined absolute -bottom-1.5 -right-1.5 text-base bg-primary text-on-primary rounded-full p-1 shadow-sm">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs">
+<h1 id="fac-name" class="font-headline-sm text-headline-sm text-on-surface">Dr. K. Raman</h1>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">Department HOD</span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full">IEEE Senior Member #9381204</span>
+</div>
+<p id="fac-dept" class="font-body-md text-body-md text-on-surface-variant mt-0.5">Professor &amp; Head of Department • Computer Science &amp; Engineering • Industrial Consultant</p>
+<div class="flex flex-wrap items-center gap-space-md mt-space-xs font-data-mono text-data-mono text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> 4 Active Industrial Grants</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-primary">group</span> <span id="fac-mentees-badge">18 Student Mentees</span></span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1 text-tertiary font-semibold"><span class="material-symbols-outlined text-sm">school</span> 2 Corporate FDPs Enrolled</span>
+</div>
+</div>
+</div>
+<!-- Header Primary Quick Actions -->
+<div class="flex flex-wrap items-center gap-space-xs shrink-0 w-full lg:w-auto justify-start lg:justify-end">
+<button class="flex items-center gap-space-2xs bg-secondary text-on-secondary font-label-md text-label-md px-4 py-2.5 rounded-lg shadow-sm hover:bg-secondary-fixed transition-all font-bold" onclick="openPublishNotifModal()">
+<span class="material-symbols-outlined text-sm">campaign</span>
+<span>+ Publish Notification</span>
+</button>
+<button class="flex items-center gap-space-2xs bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-4 py-2.5 rounded-lg shadow-sm transition-all duration-200 active:scale-95" id="openProposalModal">
+<span class="material-symbols-outlined text-sm">add_box</span>
+<span>Submit Consultancy Proposal</span>
+</button>
+<button class="flex items-center gap-space-2xs bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-3.5 py-2.5 rounded-lg transition-colors relative">
+<span class="material-symbols-outlined text-sm text-secondary">assignment_turned_in</span>
+<span>Review Student NOCs</span>
+<span class="bg-error text-on-error font-data-mono text-[10px] px-1.5 py-0.2 rounded-full font-bold ml-1">5 Pending</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Grid Content Area -->
+<div class="max-w-container-max mx-auto px-margin-desktop w-full mt-space-xl flex flex-col gap-space-2xl">
+<!-- KPI Analytical Highlights -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-bold tracking-wide">ACTIVE R&amp;D CAPITAL</span>
+<span class="material-symbols-outlined text-secondary">payments</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span id="fac-capital" class="font-headline-md text-headline-md text-on-surface font-bold font-data-mono">₹42.5 L</span>
+<span class="text-secondary font-label-sm text-label-sm font-semibold">+18.2% YoY</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">2 Joint Patents Filed (CY 2024)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-bold tracking-wide">NAAC CRITERION 6.3 SCORE</span>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span id="fac-naac" class="font-headline-md text-headline-md text-on-surface font-bold font-data-mono">94 / 100</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded-full font-bold">Grade A++</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Industrial Immersion Targets Met</span>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-bold tracking-wide">PENDING NOC VERIFICATIONS</span>
+<span class="material-symbols-outlined text-error">pending_actions</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-headline-md text-headline-md text-error font-bold font-data-mono">5</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Requests within 48h deadline</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Cisco, Intel, Infosys Labs</span>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-bold tracking-wide">CURRICULUM SYLLABUS SYNC</span>
+<span class="material-symbols-outlined text-tertiary">tune</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span id="fac-syllabus" class="font-headline-md text-headline-md text-on-surface font-bold font-data-mono">81.4%</span>
+<span class="text-secondary font-label-sm text-label-sm font-semibold">+6.4% post BoS</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">1 Critical Module Gap Identified</span>
+</div>
+</div>
+<!-- Section: Curriculum Skill Alignment Scorecard (Interactive AI Recommendation) -->
+<div class="bg-gradient-to-r from-primary-fixed/30 via-surface-container-lowest to-secondary-container/20 rounded-xl p-space-xl shadow-sm relative overflow-hidden">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md max-w-3xl">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-2xl">auto_fix_high</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-bold tracking-wider text-primary uppercase">Board of Studies Intelligence • AICTE 2024 Model Sync</span>
+<span class="bg-surface-container-highest text-on-surface font-data-mono text-[11px] px-2 py-0.5 rounded">AI Engine v2.4</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Curriculum Skill Alignment Audit: CSE 7th Sem Courseware</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+              Based on parsing 14,280 tier-1 campus hiring JDs (Amazon, Microsoft, Cisco), student market fit is depressed in distributed systems. 
+              <span class="font-semibold text-on-surface">Action Recommended:</span> Transition course <span class="font-data-mono text-primary font-bold">CS702</span> from legacy monolithic SOAP services to <span class="font-data-mono bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded font-semibold">gRPC &amp; GraphQL</span> to elevate cohort hiring competitiveness by <span class="font-bold text-secondary">+24%</span>.
+            </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col items-stretch lg:items-end gap-space-xs shrink-0 w-full lg:w-auto">
+<button class="bg-primary text-on-primary hover:bg-primary-container px-4 py-2.5 rounded-lg font-label-md text-label-md font-semibold flex items-center justify-center gap-space-xs shadow-sm transition-colors">
+<span class="material-symbols-outlined text-sm">download_for_offline</span>
+<span>Download BoS Syllabus Diff (.PDF)</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-container text-on-surface px-4 py-2 rounded-lg font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-sm">rule</span>
+<span>Trigger Department Vote</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section: Corporate Consultancy & Live Collaborative Research Opportunities -->
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Corporate Consultancy &amp; Collaborative Research Call</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Direct industry RFP statements seeking university faculty Principal Investigators with sponsored lab funding</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Filter by Domain:</span>
+<select class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded-lg shadow-sm focus:outline-none">
+<option>All Technical Domains</option>
+<option>Quantum &amp; Optimization</option>
+<option>Edge Computer Vision</option>
+<option>CleanTech Automation</option>
+</select>
+</div>
+</div>
+<!-- Problem Statement Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Live Opportunity 1: Mahindra Logistics -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center font-bold text-primary font-title-md">
+                  ML
+                </div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Mahindra Logistics R&amp;D</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">Optimization of Real-Time Logistics Routing using Quantum Algorithms</h3>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold shrink-0">Open RFP</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-md line-clamp-3">
+              Seeking Faculty PI with expertise in combinatorial optimization and quantum simulated annealing. Project entails modeling 14,000 pan-India multi-modal transit nodes to minimize deadhead fuel burn by 12%. Includes access to corporate telematics telemetry data.
+            </p>
+<div class="grid grid-cols-3 gap-space-xs mt-space-md py-space-sm bg-surface-container-low rounded-lg px-space-md font-data-mono text-data-mono">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block font-sans">Sponsored Grant</span>
+<span class="text-on-surface font-bold text-title-md">₹18.5 Lakhs</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block font-sans">Project Tenure</span>
+<span class="text-on-surface font-bold">9 Months</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block font-sans">Student Fellows</span>
+<span class="text-on-surface font-bold">2 M.Tech funded</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-space-md">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-0.5 rounded">Quantum Annealing</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-0.5 rounded">Network Flow Optimization</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-0.5 rounded">Python Qiskit</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-lg pt-space-md bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> Due: 15 Dec 2024
+            </span>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg font-semibold shadow-sm transition-colors flex items-center gap-1" onclick="alert('Navigating to PI Consultancy Proposal submission modal with pre-filled Mahindra Logistics context.');">
+<span>Apply as Academic Lead</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Live Opportunity 2: Tata Motors -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center font-bold text-tertiary font-title-md">
+                  TM
+                </div>
+<div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase tracking-wider">Tata Motors Central Innovation</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">Defect Detection in Precision Manufacturing using Edge Computer Vision</h3>
+</div>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold shrink-0">Joint Patent</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-md line-clamp-3">
+              Deployment of sub-millimeter visual anomaly inspection models on low-power ARM NVIDIA Jetson embedded hardware at body-in-white stamping lines. University partner receives co-ownership of generated IPR and laboratory equipment donation.
+            </p>
+<div class="grid grid-cols-3 gap-space-xs mt-space-md py-space-sm bg-surface-container-low rounded-lg px-space-md font-data-mono text-data-mono">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block font-sans">Sponsored Grant</span>
+<span class="text-on-surface font-bold text-title-md">₹24.0 Lakhs</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block font-sans">Project Tenure</span>
+<span class="text-on-surface font-bold">12 Months</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block font-sans">Lab Hardware</span>
+<span class="text-on-surface font-bold">4 Jetson Orin Agx</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-space-md">
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-0.5 rounded">Embedded CV</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-0.5 rounded">TensorRT</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2.5 py-0.5 rounded">Anomaly Detection</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-lg pt-space-md bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> Due: 28 Dec 2024
+            </span>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg font-semibold shadow-sm transition-colors flex items-center gap-1" onclick="alert('Navigating to PI Consultancy Proposal submission modal with pre-filled Tata Motors context.');">
+<span>Apply as Academic Lead</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Live Proposal Tracker Strip -->
+<div class="bg-surface-container-low p-space-lg rounded-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-bold">Your Active Consultancy &amp; Grant Pipeline</span>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">View All 6 Submissions</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm font-body-sm text-body-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2 py-0.5 rounded">Draft Stage</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Last edit: 2h ago</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface font-semibold mt-2 truncate">Siemens EDA: Verilog Circuit Verification</p>
+<span class="text-on-surface-variant mt-1">Proposed Budget: ₹12 Lakhs</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded font-semibold">Under Corporate Review</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Stage 2 of 3</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface font-semibold mt-2 truncate">BOSCH: Edge Sensor Fusion for EV Battery Packs</p>
+<span class="text-on-surface-variant mt-1">Status: Technical Evaluation Committee meeting set for Fri</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-bold">Funded • Active</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Milestone 2 due</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface font-semibold mt-2 truncate">Qualcomm 5G-NR Academic Research Grant</p>
+<span class="text-on-surface-variant mt-1">Disbursed: ₹15 Lakhs / ₹20 Lakhs</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2-Column Split: Mentorship Queue & FDP Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Student Mentorship & Academic Approvals Queue (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- NOC Requests Block -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">verified</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Student Internship NOC &amp; Credit Transfer Queue</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Evaluate enterprise internship syllabus mapping before official institute clearance</p>
+</div>
+<span class="bg-surface-container-high text-on-surface font-data-mono text-data-mono px-2.5 py-1 rounded-full font-bold">5 Pending</span>
+</div>
+<!-- Student Request 1: Aarav Sharma -->
+<div class="bg-surface-container-low rounded-xl p-space-md mb-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<img alt="Aarav Sharma" class="w-11 h-11 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5u40Xc6bmyTj1TLOC8oUVTQ0LRgkEOcxwNWwiJokVm6akAL-FKpeTlOopg8CgSEWAJ2ryvGIHhP-cM54-jvA19P4QEcE9wDTA4DPyX_C09J3hAti0x8YKg2O4GB6ALjQnKS8sNRCmb-UOzmGg61um_d2rbkJAjNcBbehONtg6Uy6PWi9gx6qz6spd4GMPmrjlVcuKFZJofgakdzSboTZ4Lup0FrWtJzauWC8Kps0my1Ws4Y7hvtYduw"/>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-bold">Aarav Sharma</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">(Roll: 21BCSE042)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Intern Candidate @ <strong class="text-on-surface">Cisco Systems</strong> • Bengaluru Office</span>
+</div>
+</div>
+<div class="text-right sm:shrink-0">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold px-2 py-0.5 rounded-full">Stipend: ₹35,000 / mo</span>
+</div>
+</div>
+<!-- Match Metric Bar -->
+<div class="mt-space-xs pt-space-xs flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">analytics</span> Course Syllabus Compatibility
+                </span>
+<span class="font-data-mono font-bold text-secondary">92% Match</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 92%;"></div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">Satisfies CS601 (Cloud Computing) &amp; CS604 (Advanced Networks) laboratory requirements.</span>
+</div>
+<div class="flex items-center justify-end gap-space-xs mt-space-md pt-space-xs">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded-lg transition-colors">
+                Request Syllabus Addendum
+              </button>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm px-3.5 py-1.5 rounded-lg font-semibold shadow-sm transition-all flex items-center gap-1" onclick="this.innerText='NOC Digitally Signed'; this.disabled=true; this.classList.replace('bg-primary','bg-secondary');">
+<span class="material-symbols-outlined text-sm">draw</span>
+<span>Sign Digital NOC</span>
+</button>
+</div>
+</div>
+<!-- Student Request 2: Meera Pillai -->
+<div class="bg-surface-container-low rounded-xl p-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Close-up professional portrait of a young Indian female engineering student with glasses and hair tied back, confident expression in computer science classroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASTmUhAjQ4TCspFccurPoCimgU8wDD2BWqCCsnvm8HQIdmMObpvdTR-056qzqRCpOZSm30F8jmrS8fyx_8KrNHiwDjvBDQ09BJa6-mxw_ZIv4rCYwCnvZhDAYhaLHHfN9v7FsP0EhyxWlogZEVhG7s0AQKIThxVC82R-7ZG0Sw7ERVZTlfJEsgnITxTxkXb7f3TZSsvrzQbTnLGaqO04eQW9V2akATtAGX6K7ehC2NpyiY_-pinSqijA"/>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-bold">Meera Pillai</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">(Roll: 21BCSE088)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Embedded Systems Trainee @ <strong class="text-on-surface">Intel IoT Labs</strong> • Hyderabad</span>
+</div>
+</div>
+<div class="text-right sm:shrink-0">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold px-2 py-0.5 rounded-full">Stipend: ₹42,000 / mo</span>
+</div>
+</div>
+<div class="mt-space-xs pt-space-xs flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">analytics</span> Course Syllabus Compatibility
+                </span>
+<span class="font-data-mono font-bold text-secondary">88% Match</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 88%;"></div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">Fulfills 6 Academic Credits for 8th Sem Elective II (IoT &amp; Edge Architectures).</span>
+</div>
+<div class="flex items-center justify-end gap-space-xs mt-space-md pt-space-xs">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded-lg transition-colors">
+                View Lab Syllabus
+              </button>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm px-3.5 py-1.5 rounded-lg font-semibold shadow-sm transition-all flex items-center gap-1" onclick="this.innerText='Credits Transfer Approved (6 Cr)'; this.disabled=true; this.classList.replace('bg-primary','bg-secondary');">
+<span class="material-symbols-outlined text-sm">task_alt</span>
+<span>Approve Credits Transfer</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Mentorship Schedule Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary">calendar_clock</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Upcoming Student Mentorship Sessions</h3>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline">+ Block Office Hours</button>
+</div>
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+<div class="flex items-start gap-space-md p-space-sm bg-surface-container-low rounded-lg">
+<div class="bg-primary text-on-primary font-data-mono text-center px-2.5 py-1.5 rounded-lg shrink-0">
+<span class="block text-title-md font-bold leading-none">TODAY</span>
+<span class="text-[10px] font-sans">04:00 PM</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-on-surface truncate">Capstone Architecture Review • Project Team Alpha</span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] px-1.5 py-0.5 rounded">Lab 402</span>
+</div>
+<p class="text-on-surface-variant text-body-sm mt-0.5 line-clamp-1">Reviewing scalable distributed ledger design for healthcare records prior to SIH finals.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-space-sm bg-surface-container-low rounded-lg">
+<div class="bg-surface-container text-on-surface font-data-mono text-center px-2.5 py-1.5 rounded-lg shrink-0">
+<span class="block text-title-md font-bold leading-none">TOM</span>
+<span class="text-[10px] font-sans">11:00 AM</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-on-surface truncate">Research Paper Drafting: Federated Learning Privacy</span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] px-1.5 py-0.5 rounded">Google Meet</span>
+</div>
+<p class="text-on-surface-variant text-body-sm mt-0.5 line-clamp-1">Finalizing benchmark figures with Ph.D. scholar Ananya Sen before IEEE INFOCOM deadline.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Faculty Development Programs (FDPs) & Industrial Immersion (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg" id="fdp-section">
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Upskilling • NAAC Criterion 6</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Faculty Development &amp; Immersion</h3>
+</div>
+<span class="material-symbols-outlined text-secondary">workspace_premium</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Government and industry co-certified programs tailored for senior academicians.</p>
+<!-- FDP Card 1: Red Hat India -->
+<div class="bg-surface-container-low rounded-xl p-space-md relative overflow-hidden group hover:shadow-sm transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">AICTE Sponsored</span>
+<span class="text-on-surface-variant font-data-mono text-data-mono">4-Week Immersion</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold mt-2">Advanced Cloud Native Architectures &amp; Microservices</h4>
+<span class="font-label-sm text-label-sm text-primary font-medium block mt-0.5">Offered by Red Hat India Enterprise Academy</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Hands-on enterprise immersion covering Kubernetes operators, service mesh orchestration, and CI/CD pipelines. Includes faculty certificate of industry practice.
+            </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> NAAC Validated (30 API Pts)
+              </span>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm px-3.5 py-1.5 rounded-lg font-semibold shadow-sm transition-all" onclick="this.innerText='Enrolled'; this.disabled=true; this.classList.replace('bg-primary','bg-surface-container-highest'); this.classList.replace('text-on-primary','text-on-surface');">
+                Enroll Faculty Seat
+              </button>
+</div>
+</div>
+<!-- FDP Card 2: NVIDIA DLI -->
+<div class="bg-surface-container-low rounded-xl p-space-md relative overflow-hidden group hover:shadow-sm transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Free for Academic Faculty</span>
+<span class="text-error font-data-mono text-data-mono font-semibold">80 Seats Left</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold mt-2">Generative AI &amp; LLM Deployment in Enterprise</h4>
+<span class="font-label-sm text-label-sm text-tertiary font-medium block mt-0.5">Offered by NVIDIA Deep Learning Institute (DLI)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Deep dive into parameter efficient fine-tuning (LoRA/QLoRA), vLLM inference optimization, and NeMo Guardrails on DGX Cloud infrastructure.
+            </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> GPU Cloud Lab Credits
+              </span>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm px-3.5 py-1.5 rounded-lg font-semibold shadow-sm transition-all" onclick="this.innerText='Enrolled'; this.disabled=true; this.classList.replace('bg-primary','bg-surface-container-highest'); this.classList.replace('text-on-primary','text-on-surface');">
+                Enroll Faculty Seat
+              </button>
+</div>
+</div>
+</div>
+<!-- Downloadable Accreditation Badges for NAAC Criterion 6 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-bold">Accreditation Dossier (NAAC Criterion 6)</span>
+<span class="material-symbols-outlined text-on-surface-variant">folder_zip</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Pre-formatted signed industrial accreditation credentials ready for university IQAC audit verification.</p>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">AWS Certified Machine Learning Specialist</p>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Completed July 2024 • Ref: FDP-IN-9812</span>
+</div>
+</div>
+<button class="text-primary hover:text-primary-container p-1.5 rounded" title="Download Verified Certificate">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Intel Edge AI for Industrial Robotics Immersion</p>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Completed Mar 2024 • Ref: INT-AC-4412</span>
+</div>
+</div>
+<button class="text-primary hover:text-primary-container p-1.5 rounded" title="Download Verified Certificate">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</div>
+</div>
+<button class="w-full mt-space-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md py-2.5 rounded-lg flex items-center justify-center gap-space-xs font-semibold transition-colors">
+<span class="material-symbols-outlined text-sm">archive</span>
+<span>Download All NAAC Criterion 6 Evidence (ZIP)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Slideover / Modal for Proposal Submission (Toggled by Button) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-margin-mobile" id="proposalModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-xl w-full p-space-xl shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">post_add</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">New Industrial Consultancy Proposal</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="closeProposalModal">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1">Target Corporate / Agency</label>
+<input class="w-full bg-surface-container-low text-on-surface px-3 py-2 rounded-lg border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary" type="text" value="Mahindra Logistics R&amp;D"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1">Project Title / Scope of Work</label>
+<input class="w-full bg-surface-container-low text-on-surface px-3 py-2 rounded-lg border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary" type="text" value="Quantum Annealing for Dynamic High-Density Freight Routing"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1">Proposed Budget (INR)</label>
+<input class="w-full bg-surface-container-low text-on-surface px-3 py-2 rounded-lg border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary font-data-mono" type="text" value="₹18,50,000"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1">Expected Deliverables</label>
+<input class="w-full bg-surface-container-low text-on-surface px-3 py-2 rounded-lg border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary" type="text" value="Algorithm POC + 2 Patents"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1">Upload Executive Summary &amp; University BoG Clearance</label>
+<div class="border-2 border-dashed border-outline-variant rounded-lg p-space-md text-center bg-surface-container-low hover:bg-surface-container cursor-pointer">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant">cloud_upload</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Drag &amp; drop formal RFP docket (.PDF) or click to browse</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-xs mt-space-sm pt-space-sm border-t border-surface-container-high">
+<button class="bg-surface-container text-on-surface px-4 py-2 rounded-lg font-label-md text-label-md" id="cancelModalBtn">Cancel</button>
+<button class="bg-primary text-on-primary font-semibold px-4 py-2 rounded-lg font-label-md text-label-md shadow-sm" id="submitProposalBtn">Submit to Dean &amp; Corporate Desk</button>
+</div>
+</div>
+</div>
+
+<!-- Publish Notification Modal -->
+<div id="publishNotifModal" class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-center justify-center hidden p-4">
+  <div class="bg-surface-container-lowest max-w-md w-full rounded-2xl p-6 shadow-2xl border border-surface-container-high relative">
+    <div class="flex items-center justify-between pb-4 border-b border-surface-container-high">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-secondary text-2xl">campaign</span>
+        <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Publish Announcement</h3>
+      </div>
+      <button onclick="closePublishNotifModal()" class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="space-y-4 my-4">
+      <div>
+        <label class="block text-xs font-bold text-on-surface-variant mb-1 uppercase">Notification Title</label>
+        <input type="text" id="notif-title-inp" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2.5 font-body-md text-on-surface" placeholder="e.g. SIH 2024 Final R&D Hackathon Guidelines Released" />
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-on-surface-variant mb-1 uppercase">Message / Content</label>
+        <textarea id="notif-body-inp" rows="3" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2.5 font-body-md text-on-surface" placeholder="Enter full announcement details for students and recruiters..."></textarea>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-on-surface-variant mb-1 uppercase">Target Audience</label>
+        <select id="notif-aud-inp" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2.5 font-body-md text-on-surface">
+          <option value="All Students">All Students</option>
+          <option value="Final Year Students">Final Year Students</option>
+          <option value="All Portals & Industry Partners">All Portals & Industry Partners</option>
+        </select>
+      </div>
+    </div>
+    <div class="flex justify-end gap-3 pt-3 border-t border-surface-container-high">
+      <button onclick="closePublishNotifModal()" class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-semibold text-sm hover:bg-surface-container-high transition-colors">Cancel</button>
+      <button onclick="submitFacultyNotification()" class="px-5 py-2 rounded-lg bg-secondary text-on-secondary font-bold text-sm shadow hover:bg-secondary-fixed transition-all flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-base">send</span>
+        Publish Broadcast
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+    (function() {
+      const openModalBtn = document.getElementById('openProposalModal');
+      const closeModalBtn = document.getElementById('closeProposalModal');
+      const cancelModalBtn = document.getElementById('cancelModalBtn');
+      const submitProposalBtn = document.getElementById('submitProposalBtn');
+      const modal = document.getElementById('proposalModal');
+
+      if (openModalBtn && modal) {
+        openModalBtn.addEventListener('click', () => {
+          modal.classList.remove('hidden');
+        });
+      }
+
+      const hideModal = () => {
+        if (modal) modal.classList.add('hidden');
+      };
+
+      if (closeModalBtn) closeModalBtn.addEventListener('click', hideModal);
+      if (cancelModalBtn) cancelModalBtn.addEventListener('click', hideModal);
+
+      if (submitProposalBtn) {
+        submitProposalBtn.addEventListener('click', () => {
+          submitProposalBtn.innerText = 'Transmitting Proposal...';
+          setTimeout(() => {
+            alert('Proposal successfully submitted to Industry Partner and Dean (R&D) for synchronized electronic countersignature.');
+            hideModal();
+            submitProposalBtn.innerText = 'Submit to Dean & Corporate Desk';
+          }, 600);
+        });
+      }
+    })();
+
+    function openPublishNotifModal() {
+      document.getElementById('publishNotifModal')?.classList.remove('hidden');
+    }
+    function closePublishNotifModal() {
+      document.getElementById('publishNotifModal')?.classList.add('hidden');
+    }
+    function submitFacultyNotification() {
+      const title = document.getElementById('notif-title-inp')?.value.trim();
+      const body = document.getElementById('notif-body-inp')?.value.trim();
+      const aud = document.getElementById('notif-aud-inp')?.value;
+
+      if (!title || !body) {
+        alert('Please enter both title and announcement text.');
+        return;
+      }
+
+      window.SBDynamic.addNotification({
+        title: title,
+        message: `${body} (Target: ${aud})`,
+        category: 'Faculty Announcement',
+        time: 'Just now'
+      });
+
+      closePublishNotifModal();
+      if (document.getElementById('notif-title-inp')) document.getElementById('notif-title-inp').value = '';
+      if (document.getElementById('notif-body-inp')) document.getElementById('notif-body-inp').value = '';
+      alert('Notification published globally across all portals! Check the bell icon in header.');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest mt-auto"><div class="max-w-container-max mx-auto px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-5 gap-space-lg pb-space-lg"><div class="md:col-span-2 flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-bold">SkillBridge</span><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full">SIH 2024</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Unified Academia-Industry Convergence Engine. Empowering student employability, dynamic university curriculum alignment, and data-backed corporate talent pipelines under the Smart India Hackathon initiative.</p></div><div class="flex flex-col gap-space-2xs"><span class="font-label-md text-label-md font-bold text-on-surface">Student Hub</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Skill Assessments</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Internship Portal</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Verified Portfolio</a></div><div class="flex flex-col gap-space-2xs"><span class="font-label-md text-label-md font-bold text-on-surface">Industry &amp; Faculty</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Recruiter ATS Engine</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Talent Analytics</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Faculty R&amp;D Matching</a></div><div class="flex flex-col gap-space-2xs"><span class="font-label-md text-label-md font-bold text-on-surface">Institutional Help</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Curriculum Intelligence</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">NIRF &amp; NAAC Metric Sync</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Support &amp; Documentation</a></div></div><div class="flex flex-col md:flex-row items-center justify-between gap-space-sm pt-space-md text-on-surface-variant font-label-sm text-label-sm"><span>© 2024 SkillBridge • Ministry of Education &amp; AICTE Innovation Cell Initiative</span><div class="flex items-center gap-space-md"><span>National Skill Qualification Framework (NSQF) Compliant</span><span>ISO 27001 Certified Infrastructure</span></div></div></div></footer><script src="../shared/auth.js"></script>
+<script src="../shared/nav.js"></script>
+<script src="../shared/dynamic_data.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    initFacultyDashboard();
+    window.addEventListener('sb-data-updated', initFacultyDashboard);
+  });
+
+  function initFacultyDashboard() {
+    const data = window.SBDynamic.getData();
+    const f = data.faculty;
+
+    if (document.getElementById('inp-fac-name')) document.getElementById('inp-fac-name').value = f.facName || '';
+    if (document.getElementById('inp-fac-dept')) document.getElementById('inp-fac-dept').value = f.department || f.institution || '';
+    if (document.getElementById('inp-fac-capital')) document.getElementById('inp-fac-capital').value = f.capitalLakhs || 42.5;
+    if (document.getElementById('inp-fac-naac')) document.getElementById('inp-fac-naac').value = f.naacScore || 94;
+    if (document.getElementById('inp-fac-mentees')) document.getElementById('inp-fac-mentees').value = f.menteesCount || 18;
+    if (document.getElementById('inp-fac-syllabus')) document.getElementById('inp-fac-syllabus').value = f.syllabusSync || 81.4;
+
+    if (document.getElementById('fac-name') && f.facName) document.getElementById('fac-name').textContent = f.facName;
+    if (document.getElementById('fac-dept') && f.department) document.getElementById('fac-dept').textContent = f.department;
+
+    const cap = parseFloat(f.capitalLakhs) || 42.5;
+    const naac = parseInt(f.naacScore) || 94;
+    const mentees = parseInt(f.menteesCount) || 18;
+    const syl = parseFloat(f.syllabusSync) || 81.4;
+
+    if (document.getElementById('fac-capital')) document.getElementById('fac-capital').textContent = '₹' + cap + ' L';
+    if (document.getElementById('fac-naac')) document.getElementById('fac-naac').textContent = naac + ' / 100';
+    if (document.getElementById('fac-mentees-badge')) document.getElementById('fac-mentees-badge').textContent = mentees + ' Student Mentees';
+    if (document.getElementById('fac-syllabus')) document.getElementById('fac-syllabus').textContent = syl + '%';
+  }
+
+  function applyFacultyDataInputs() {
+    const facName = document.getElementById('inp-fac-name').value.trim();
+    const dept = document.getElementById('inp-fac-dept').value.trim();
+    const capital = parseFloat(document.getElementById('inp-fac-capital').value) || 0;
+    const naac = parseInt(document.getElementById('inp-fac-naac').value) || 0;
+    const mentees = parseInt(document.getElementById('inp-fac-mentees').value) || 0;
+    const syl = parseFloat(document.getElementById('inp-fac-syllabus').value) || 0;
+
+    window.SBDynamic.updateData(data => {
+      data.faculty.facName = facName;
+      data.faculty.department = dept;
+      data.faculty.capitalLakhs = capital;
+      data.faculty.naacScore = naac;
+      data.faculty.menteesCount = mentees;
+      data.faculty.syllabusSync = syl;
+    });
+
+    initFacultyDashboard();
+    alert('Faculty R&D metrics recalculated dynamically based on your entered data!');
+  }
+</script>
+</body></html>

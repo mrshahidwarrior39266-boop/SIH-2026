@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillBridge — Signing you in...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#050b18;color:#f0f4ff;display:flex;align-items:center;justify-content:center;min-height:100vh;flex-direction:column;gap:24px}
+    .spinner{width:48px;height:48px;border:3px solid rgba(99,102,241,0.2);border-top-color:#6366f1;border-radius:50%;animation:spin 0.8s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .msg{font-size:16px;color:#8a9bbf;font-weight:500}
+    .logo{font-size:24px;font-weight:800;background:linear-gradient(90deg,#fff,#a5b4fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+  </style>
+</head>
+<body>
+  <div class="logo">SkillBridge</div>
+  <div class="spinner"></div>
+  <p class="msg" id="msg">Signing you in with Google...</p>
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const token  = params.get('token');
+      const profileComplete = params.get('profileComplete');
+
+      if (!token) {
+        document.getElementById('msg').textContent = 'Authentication failed. Redirecting...';
+        setTimeout(() => { window.location.href = 'index.html'; }, 2000);
+        return;
+      }
+
+      // Store token
+      localStorage.setItem('sb_token', token);
+      try {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        localStorage.setItem('sb_user', JSON.stringify(payload));
+      } catch(e) {}
+
+      // Redirect
+      if (profileComplete === '0' || profileComplete === 'false') {
+        document.getElementById('msg').textContent = 'Account created! Setting up your profile...';
+        setTimeout(() => { window.location.href = 'profile_setup/index.html'; }, 800);
+      } else {
+        document.getElementById('msg').textContent = 'Welcome back! Loading your dashboard...';
+        // Get role from token and redirect
+        try {
+          const payload = JSON.parse(atob(token.split('.')[1]));
+          const roleMap = {
+            student:     'student_dashboard_skill_gap_hub/code.html',
+            recruiter:   'industry_recruiter_matching_engine/code.html',
+            faculty:     'faculty_r_d_fdp_mentorship_portal/code.html',
+            institution: 'institution_analytics_tpo_intelligence/code.html',
+          };
+          const dest = roleMap[payload.role] || 'skillbridge_academia_industry_platform/code.html';
+          setTimeout(() => { window.location.href = dest; }, 800);
+        } catch(e) {
+          setTimeout(() => { window.location.href = 'skillbridge_academia_industry_platform/code.html'; }, 800);
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

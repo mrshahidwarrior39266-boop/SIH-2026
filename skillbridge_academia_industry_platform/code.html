@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c7c4d8", "inverse-on-surface": "#eef0ff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-background": "#131b2e", "on-primary-fixed": "#0f0069", "error": "#ba1a1a", "secondary-container": "#86f2e4", "inverse-surface": "#283044", "inverse-primary": "#c3c0ff", "on-error-container": "#93000a", "outline": "#777587", "secondary-fixed-dim": "#6bd8cb", "primary-container": "#4f46e5", "surface-container-lowest": "#ffffff", "secondary-fixed": "#89f5e7", "surface-container-highest": "#dae2fd", "surface-tint": "#4d44e3", "surface-dim": "#d2d9f4", "tertiary": "#004c76", "primary-fixed": "#e2dfff", "secondary": "#006a61", "surface-variant": "#dae2fd", "surface-container": "#eaedff", "on-secondary-fixed": "#00201d", "surface-bright": "#faf8ff", "primary-fixed-dim": "#c3c0ff", "background": "#faf8ff", "on-surface": "#131b2e", "tertiary-container": "#00659a", "on-primary-fixed-variant": "#3323cc", "on-secondary-container": "#006f66", "primary": "#3525cd", "surface-container-high": "#e2e7ff", "on-tertiary": "#ffffff", "on-surface-variant": "#464555", "on-secondary-fixed-variant": "#005049", "on-tertiary-container": "#bedfff", "on-tertiary-fixed-variant": "#004b73", "on-primary": "#ffffff", "surface": "#faf8ff", "tertiary-fixed": "#cce5ff", "tertiary-fixed-dim": "#93ccff", "on-tertiary-fixed": "#001d31", "on-primary-container": "#dad7ff", "on-error": "#ffffff", "surface-container-low": "#f2f3ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-tablet": "1rem", "gutter-mobile": "0.75rem", "space-2xs": "0.25rem", "margin-mobile": "1rem", "container-max": "1440px", "space-md": "1rem", "space-xl": "2rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "space-2xl": "3rem", "gutter-desktop": "1.5rem", "margin-desktop": "2rem", "space-3xl": "4rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "data-mono": ["JetBrains Mono"], "headline-md": ["Inter"], "display-lg": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "title-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "data-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-surface-container-high py-1 px-margin-desktop text-center text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>Smart India Hackathon 2024 Demo Mode • Live Data Active</span></div><div class="h-20 max-w-container-max mx-auto px-margin-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md shrink-0"><img alt="SkillBridge Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vtb0bo0ZiQfb10ngN-iZsavE7I4YMuRg6hNS5YvDiiVecaB29kE6NQDrSmvLOKTvvMZvToRMUnvye79sfj8O6atOmkYove-haONv3TXTCY_eocVobF_MUJlYQHmta04wymi3VBsR17_YacKVfjvtVXCeGlvM_DWfMhrKjc1VTmBeNk4xUM3BUEN12-aifHt9OK9zjVgvhpyn9CcBwmzu2gNsVIWJleSm6w-zhcEEmbbVgIS-P04O6udyg"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-bold tracking-tight">SkillBridge</span><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full">SIH 2024 Finalist</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Academia • Industry Portal</span></div></div><nav class="hidden xl:flex items-center gap-space-xs shrink-0" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" data-path="student-hub" href="../student_dashboard_skill_gap_hub/code.html">Student Hub</a><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" data-path="industry-partner" href="../industry_recruiter_matching_engine/code.html">Industry Partner</a><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" data-path="faculty-and-rd" href="../faculty_r_d_fdp_mentorship_portal/code.html">Faculty &amp; R&amp;D</a><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" data-path="institution-analytics" href="../institution_analytics_tpo_intelligence/code.html">Institution Analytics</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="hidden md:flex items-center bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface-variant gap-space-xs"><span class="material-symbols-outlined text-sm">search</span><span class="font-body-sm text-body-sm text-outline">Search skills, internships...</span><kbd class="bg-surface-container text-on-surface-variant font-data-mono text-data-mono px-1.5 py-0.5 rounded">⌘K</kbd></div><div id="sb-role-pill" class="flex items-center gap-space-2xs bg-surface-container px-2.5 py-1.5 rounded-lg text-on-surface font-label-sm text-label-sm cursor-pointer hover:bg-surface-container-high transition-colors"><span class="font-semibold">Role:</span><span class="text-primary-container font-semibold">Student</span><span class="material-symbols-outlined text-sm">expand_more</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg hover:bg-surface-container transition-colors text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-base">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-on-error font-data-mono text-[10px] rounded-full flex items-center justify-center font-bold">3</span></button><div id="sb-user-area" class="flex items-center gap-space-xs pl-space-xs border-l border-surface-container-high"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5u40Xc6bmyTj1TLOC8oUVTQ0LRgkEOcxwNWwiJokVm6akAL-FKpeTlOopg8CgSEWAJ2ryvGIHhP-cM54-jvA19P4QEcE9wDTA4DPyX_C09J3hAti0x8YKg2O4GB6ALjQnKS8sNRCmb-UOzmGg61um_d2rbkJAjNcBbehONtg6Uy6PWi9gx6qz6spd4GMPmrjlVcuKFZJofgakdzSboTZ4Lup0FrWtJzauWC8Kps0my1Ws4Y7hvtYduw"/><span class="material-symbols-outlined absolute -bottom-1 -right-1 text-[12px] bg-secondary text-on-secondary rounded-full p-0.5">verified</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Aarav Sharma</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">IIT Delhi • B.Tech</span></div><span class="material-symbols-outlined text-sm text-on-surface-variant cursor-pointer">arrow_drop_down</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface via-surface-container-low to-surface pb-space-3xl pt-space-xl">
+<!-- Ambient backdrops -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-primary-container/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-48 -right-32 w-[450px] h-[450px] bg-secondary-container/40 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<!-- Announcement Pill -->
+<div class="flex items-center justify-center">
+<div class="inline-flex items-center gap-space-xs px-4 py-1.5 rounded-full bg-surface-container-highest shadow-sm hover:shadow-md transition-all duration-300 cursor-default">
+<span class="text-sm">🏆</span>
+<span class="font-label-md text-label-md text-primary font-semibold tracking-tight">Smart India Hackathon Prototype</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">AI-Powered Skill Mapping &amp; Placement Engine</span>
+</div>
+</div>
+<!-- Hero Header -->
+<div class="mt-space-lg text-center max-w-4xl mx-auto">
+<h1 class="font-display-lg text-display-lg text-on-surface font-extrabold tracking-tight leading-tight">
+          Bridge the Gap Between <br class="hidden sm:inline"/>
+<span class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">
+            Academia &amp; Industry
+          </span>
+</h1>
+<p class="mt-space-md font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+          Skill Mapping • Intelligent Internships • Smart Placements • Academic R&amp;D Collaboration
+        </p>
+<!-- CTA Buttons Group -->
+<div class="mt-space-xl flex flex-wrap items-center justify-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs px-7 py-3.5 rounded-lg bg-primary-container text-on-primary font-title-md text-title-md font-semibold shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 group" href="#role-selector">
+<span>Get Started as Student</span>
+<span class="material-symbols-outlined text-xl transition-transform duration-200 group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-7 py-3.5 rounded-lg bg-surface-container-lowest text-primary-container font-title-md text-title-md font-semibold shadow-sm hover:shadow-lg hover:bg-secondary-container/20 hover:-translate-y-0.5 transition-all duration-200" href="#role-selector">
+<span class="material-symbols-outlined text-secondary">handshake</span>
+<span>Join as Industry Partner</span>
+</a>
+</div>
+<div class="mt-space-sm">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#role-selector">
+<span>Institutional Accreditation &amp; Faculty Portal</span>
+<span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Interactive 3-Way Triangular Convergence Engine -->
+<div class="mt-space-2xl w-full bg-surface-container-lowest rounded-2xl shadow-xl p-space-lg lg:p-space-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-space-sm flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-data-mono text-data-mono text-secondary font-semibold uppercase tracking-wider">Neural Convergence Mesh Active</span>
+</div>
+<div class="text-center max-w-xl mx-auto mb-space-lg">
+<span class="font-label-sm text-label-sm font-bold tracking-widest text-primary uppercase">Tripartite Ecosystem Engine</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Autonomous Symbiosis Architecture</h2>
+</div>
+<!-- The 3 Nodes Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-center relative">
+<!-- Node 1: Academic Curriculum -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary mb-space-sm">
+<span class="material-symbols-outlined text-2xl">account_balance</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-tertiary bg-tertiary-fixed/60 px-2 py-0.5 rounded">Node 01</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Sync: 120ms</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-space-2xs">Academic Curriculum &amp; Faculty</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Live AI alignment with UGC &amp; AICTE frameworks, faculty development workshops (FDP), and capstone industrial thesis tracking.
+            </p>
+<div class="mt-space-md space-y-2">
+<div class="flex items-center justify-between text-body-sm text-on-surface font-medium bg-surface-container-lowest p-2 rounded-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-base">verified</span> AICTE Model Syllabus v4.2</span>
+<span class="font-data-mono text-data-mono text-secondary font-bold">96% aligned</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface font-medium bg-surface-container-lowest p-2 rounded-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-base">verified</span> Active R&amp;D Research MoUs</span>
+<span class="font-data-mono text-data-mono text-primary font-bold">142 Live</span>
+</div>
+</div>
+</div>
+<!-- Central Node: AI Skill Assessment Engine -->
+<div class="relative bg-gradient-to-br from-primary via-primary-container to-surface-tint rounded-2xl p-space-lg text-on-primary shadow-2xl scale-100 lg:scale-105 z-20">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary-fixed text-on-secondary-fixed font-data-mono text-[11px] font-bold px-3 py-0.5 rounded-full shadow-md uppercase tracking-wider">
+              Real-time Core Dispatcher
+            </div>
+<div class="w-14 h-14 rounded-2xl bg-on-primary/10 backdrop-blur-md flex items-center justify-center text-secondary-fixed mx-auto mb-space-sm mt-1">
+<span class="material-symbols-outlined text-3xl animate-pulse">neurology</span>
+</div>
+<div class="text-center">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-primary">AI Skill Assessment &amp; Mapping</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-1">
+                Deep neural parsing of student code repos, cognitive diagnostics, and continuous micro-credential indexing against corporate demands.
+              </p>
+</div>
+<div class="mt-space-md bg-inverse-surface/30 backdrop-blur-sm rounded-xl p-space-sm space-y-2">
+<div class="flex justify-between items-center text-body-sm text-on-primary">
+<span class="font-medium">Industry JD Gap Delta</span>
+<span class="font-data-mono text-data-mono text-secondary-fixed font-bold">-4.8% (Optimal)</span>
+</div>
+<div class="w-full h-2 bg-on-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed rounded-full w-[88%]"></div>
+</div>
+<div class="flex justify-between font-data-mono text-[10px] text-on-primary/80 pt-1">
+<span>Vector Embeddings: 2.4M</span>
+<span>Active Scoring: 50,210 students</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-center gap-2">
+<span class="font-label-sm text-label-sm bg-on-primary/15 px-2.5 py-1 rounded-full text-on-primary font-semibold">Semantic Matcher</span>
+<span class="font-label-sm text-label-sm bg-on-primary/15 px-2.5 py-1 rounded-full text-on-primary font-semibold">NOC Workflow</span>
+<span class="font-label-sm text-label-sm bg-on-primary/15 px-2.5 py-1 rounded-full text-on-primary font-semibold">Verifiable ATS</span>
+</div>
+</div>
+<!-- Node 3: Industry Recruiters -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container mb-space-sm">
+<span class="material-symbols-outlined text-2xl">corporate_fare</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary bg-secondary-container/70 px-2 py-0.5 rounded">Node 03</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Throughput: 99.4%</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-space-2xs">Industry Recruiters &amp; Projects</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Pre-vetted pipelines, sprint-based internships with verifiable deliverables, and algorithmic campus recruitment with zero ghosting.
+            </p>
+<div class="mt-space-md space-y-2">
+<div class="flex items-center justify-between text-body-sm text-on-surface font-medium bg-surface-container-lowest p-2 rounded-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-base">bolt</span> Corporate Sprint Openings</span>
+<span class="font-data-mono text-data-mono text-primary font-bold">1,820 Roles</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface font-medium bg-surface-container-lowest p-2 rounded-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-base">verified</span> Verified Pre-Cleared Talent</span>
+<span class="font-data-mono text-data-mono text-secondary font-bold">12,400+ Ready</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Triangular connection banner indicator -->
+<div class="mt-space-lg pt-space-md bg-surface-container-lowest rounded-xl flex flex-wrap items-center justify-around gap-space-md text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">sync_alt</span>
+<span>Real-time Syllabus Drift Auto-Correction</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">fact_check</span>
+<span>Digital Dean Signed NOC Workflow</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg">token</span>
+<span>Tamper-Proof Micro-Credentials</span>
+</div>
+</div>
+</div>
+<!-- Trust Indicators & Partner Badges -->
+<div class="mt-space-2xl">
+<div class="text-center mb-space-md">
+<p class="font-label-md text-label-md font-semibold text-on-surface-variant uppercase tracking-widest">
+            Trusted by 200+ Colleges • 1,500+ Industry Partners • 50,000+ Students Certified • 94.2% Placement Readiness
+          </p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="bg-surface-container-highest px-4 py-2 rounded-lg font-label-md text-label-md font-semibold text-on-surface shadow-sm hover:shadow transition-shadow flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">school</span> IIT Bombay
+          </span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-lg font-label-md text-label-md font-semibold text-on-surface shadow-sm hover:shadow transition-shadow flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">school</span> BITS Pilani
+          </span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-lg font-label-md text-label-md font-semibold text-on-surface shadow-sm hover:shadow transition-shadow flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">domain</span> Infosys
+          </span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-lg font-label-md text-label-md font-semibold text-on-surface shadow-sm hover:shadow transition-shadow flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">domain</span> Tata Consultancy Services
+          </span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-lg font-label-md text-label-md font-semibold text-on-surface shadow-sm hover:shadow transition-shadow flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">cloud_done</span> Microsoft India
+          </span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-lg font-label-md text-label-md font-semibold text-on-surface shadow-sm hover:shadow transition-shadow flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">engineering</span> Larsen &amp; Toubro
+          </span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-lg font-label-md text-label-md font-semibold text-on-surface shadow-sm hover:shadow transition-shadow flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">rocket_launch</span> ISRO Academic Cell
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- VALUE PILLARS (3 FEATURE CARDS WITH RICH MOCKUPS) -->
+<section class="py-space-3xl bg-surface-container-lowest relative">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-widest text-primary">Core Value Pillars</span>
+<h2 class="font-headline-lg text-headline-lg font-extrabold text-on-surface mt-1">
+          Precision Systems Designed for Institutional Scale
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+          Engineered to eradicate the friction between university degree completion and Day-1 corporate project contribution.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Pillar 1: AI Skill Mapping & Radar -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="p-2.5 rounded-xl bg-primary text-on-primary material-symbols-outlined">radar</span>
+<span class="bg-secondary-container text-on-secondary-container font-data-mono text-data-mono font-bold px-2 py-0.5 rounded-full">Gap: -3.2%</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">AI Skill Mapping &amp; Radar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+              Real-time diagnostic engine cross-referencing college curriculum modules with live corporate job descriptions and production stack requirements.
+            </p>
+<!-- Interactive Radar Chart Mockup -->
+<div class="mt-space-lg bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex justify-between items-center mb-space-xs">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Syllabus vs Industry Demand</span>
+<span class="font-data-mono text-[11px] text-primary font-semibold">IITD CS-702</span>
+</div>
+<!-- SVG Radar Visualization -->
+<div class="relative flex items-center justify-center py-2">
+<svg class="w-full max-w-[180px] h-auto overflow-visible" viewbox="0 0 200 180">
+<!-- Hexagonal concentric grids -->
+<polygon fill="none" points="100,20 170,55 170,125 100,160 30,125 30,55" stroke="#dae2fd" stroke-width="1.5"></polygon>
+<polygon fill="none" points="100,45 145,67 145,112 100,135 55,112 55,67" stroke="#eaedff" stroke-width="1.5"></polygon>
+<!-- Syllabus Coverage Polygon -->
+<polygon fill="#4f46e5" fill-opacity="0.25" points="100,40 150,75 130,120 100,140 45,110 50,65" stroke="#4f46e5" stroke-width="2"></polygon>
+<!-- Industry JD Match Polygon -->
+<polygon fill="#006a61" fill-opacity="0.2" points="100,25 165,60 155,123 100,150 40,118 35,58" stroke="#006a61" stroke-dasharray="3,3" stroke-width="2"></polygon>
+<!-- Axis Labels -->
+<text class="text-[9px] fill-on-surface-variant font-data-mono" text-anchor="middle" x="100" y="14">Distributed Sys</text>
+<text class="text-[9px] fill-on-surface-variant font-data-mono" text-anchor="start" x="180" y="55">Kubernetes</text>
+<text class="text-[9px] fill-on-surface-variant font-data-mono" text-anchor="start" x="180" y="130">Cloud Opt</text>
+<text class="text-[9px] fill-on-surface-variant font-data-mono" text-anchor="middle" x="100" y="174">System Design</text>
+<text class="text-[9px] fill-on-surface-variant font-data-mono" text-anchor="end" x="20" y="130">Go / Rust</text>
+<text class="text-[9px] fill-on-surface-variant font-data-mono" text-anchor="end" x="20" y="55">CI/CD</text>
+</svg>
+</div>
+<div class="mt-2 flex items-center justify-between text-[11px] font-label-sm border-t border-surface-container pt-2">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded bg-primary"></span>
+<span class="text-on-surface-variant">College Syllabus</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded bg-secondary"></span>
+<span class="text-on-surface-variant">Corporate JD Target</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between font-label-md text-label-md text-primary font-semibold">
+<span>Explore Gap Diagnostic Demo</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 2: Smart Internships Engine -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="p-2.5 rounded-xl bg-secondary text-on-secondary material-symbols-outlined">verified_user</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-data-mono text-data-mono font-bold px-2.5 py-0.5 rounded-full">94% Compatibility</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Smart Internships Engine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+              Guaranteed verified deliverables with 85%+ compatibility algorithmic matching, milestone validation, and faculty co-endorsement.
+            </p>
+<!-- Interactive Match Card Mockup -->
+<div class="mt-space-lg bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center font-bold text-primary font-headline-sm">
+                  M
+                </div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-title-md text-title-md font-bold text-on-surface truncate">Microsoft Cloud R&amp;D</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Azure Systems Engineering Sprint</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-data-mono text-data-mono font-bold px-2 py-0.5 rounded">94% Match</span>
+</div>
+<!-- Milestone Step Mockup -->
+<div class="bg-surface-container-low rounded-lg p-2.5 space-y-1.5">
+<div class="flex justify-between items-center text-[11px] font-label-sm">
+<span class="font-bold text-on-surface">Milestone 2 of 4: Microservice Mesh</span>
+<span class="text-secondary font-semibold font-data-mono">Verified by Mentor</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-2/3"></div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="inline-flex items-center text-[10px] text-on-surface-variant font-data-mono gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary">assignment_turned_in</span> Digital NOC Signed
+                  </span>
+<span class="inline-flex items-center text-[10px] text-on-surface-variant font-data-mono gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">school</span> Faculty Co-Evaluated
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between font-label-md text-label-md text-secondary font-semibold">
+<span>View Verified Internship Pool</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 3: Intelligent Placements & ATS -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="p-2.5 rounded-xl bg-tertiary-container text-on-tertiary material-symbols-outlined">hub</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-data-mono text-data-mono font-bold px-2 py-0.5 rounded-full">Zero Ghosting SLA</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Intelligent Placements &amp; ATS</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+              Direct corporate recruitment backed by cryptographically verifiable student skill profiles, continuous automated screening, and fast-track interviews.
+            </p>
+<!-- ATS Mockup -->
+<div class="mt-space-lg bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-2.5">
+<div class="flex items-center justify-between text-body-sm font-semibold text-on-surface">
+<span>Fast-Track Pipeline</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">Updated 4m ago</span>
+</div>
+<div class="space-y-2">
+<div class="p-2 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">System Arch Evaluation</span>
+</div>
+<span class="font-data-mono text-data-mono text-secondary font-bold">100 / 100</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Live Repo Code Review</span>
+</div>
+<span class="font-data-mono text-data-mono text-secondary font-bold">Top 2%</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Direct Offer Desk</span>
+</div>
+<span class="font-data-mono text-data-mono text-primary font-bold">3 Invites</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between font-label-md text-label-md text-tertiary-container font-semibold">
+<span>Explore Campus Recruitment Cloud</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS (4 STEP INTERACTIVE TIMELINE) -->
+<section class="py-space-3xl bg-surface relative">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-widest text-primary">Streamlined Pipeline</span>
+<h2 class="font-headline-lg text-headline-lg font-extrabold text-on-surface mt-1">
+          From Academic Enrollment to High-Impact Placement
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+          A four-stage synchronized bridge that converts foundational degrees into verified corporate performance.
+        </p>
+</div>
+<!-- Timeline Container -->
+<div class="relative">
+<!-- Connecting Line for Desktop -->
+<div class="hidden lg:block absolute top-1/2 left-8 right-8 h-1 bg-surface-container-high -translate-y-12 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg relative z-10">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-headline-sm text-headline-sm font-bold mb-space-md shadow-sm">
+                01
+              </div>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">Stage 1</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Assess &amp; Map</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Deep neural diagnostic evaluates student engineering repos, theory tests, and soft skills against live tier-1 company tech stacks.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container">
+<span class="font-data-mono text-data-mono text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span> Automated Vector Scoring
+              </span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container font-headline-sm text-headline-sm font-bold mb-space-md shadow-sm">
+                02
+              </div>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">Stage 2</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Bridge Gaps</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Targeted AI-generated micro-modules, corporate-sponsored bootcamp challenges, and faculty-mentored capstone sprints.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container">
+<span class="font-data-mono text-data-mono text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span> Micro-Credential Badging
+              </span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-headline-sm text-headline-sm font-bold mb-space-md shadow-sm">
+                03
+              </div>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-tertiary">Stage 3</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Match &amp; Intern</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Algorithmic 1-click matches for live industry assignments. Instant clearance via institutional digital NOCs signed by Deans.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container">
+<span class="font-data-mono text-data-mono text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span> Automated College NOC
+              </span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary-container font-headline-sm text-headline-sm font-bold mb-space-md shadow-sm">
+                04
+              </div>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">Stage 4</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Hire &amp; Placed</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Zero ghosting hiring pipeline with pre-cleared compensation packages, direct offer dispatch, and AICTE performance credit sync.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container">
+<span class="font-data-mono text-data-mono text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span> Tamper-proof Verification
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROLE SELECTION PORTAL SECTION -->
+<section class="py-space-3xl bg-surface-container-low relative" id="role-selector">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-widest text-primary">Dedicated Access Gates</span>
+<h2 class="font-headline-lg text-headline-lg font-extrabold text-on-surface mt-1">
+          Select Your Portal Experience
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+          Role-tailored dashboards designed specifically for students, recruiters, academic researchers, and university leadership.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Role 1: For Students -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">Learners &amp; Graduates</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">For Students</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Diagnose real tech gaps, generate verified project portfolios, and claim high-stipend corporate internships.
+            </p>
+<ul class="mt-space-md space-y-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Live Skill Gap Diagnostic Radar
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Dynamic Code Portfolio &amp; Badges
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> 1-Click Fast-Track Application
+              </li>
+</ul>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-surface-container">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-all" data-path="student-hub" href="#">
+<span>Launch Student Hub</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Role 2: For Industry Partners -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">business_center</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">Recruiters &amp; Tech Leads</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">For Industry Partners</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Automate campus drives, sponsor real challenge problems, and hire pre-screened talent with guaranteed readiness.
+            </p>
+<ul class="mt-space-md space-y-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> 85%+ Match Candidate Feeds
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Automated Code Assessment Sandbox
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Multi-Campus Fast Drive Suite
+              </li>
+</ul>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-surface-container">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-high text-secondary font-label-md text-label-md font-semibold hover:bg-secondary hover:text-on-secondary transition-all" data-path="industry-partner" href="#">
+<span>Enter Recruiter ATS</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Role 3: For Faculty & Researchers -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">biotech</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-tertiary">Faculty &amp; Guides</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">For Faculty &amp; R&amp;D</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Access corporate consultancy grants, organize funded FDPs, and monitor student internship progress seamlessly.
+            </p>
+<ul class="mt-space-md space-y-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Corporate R&amp;D Grant Matching
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Faculty Development Program Pass
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Capstone Co-Mentorship Hub
+              </li>
+</ul>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-surface-container">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-high text-tertiary font-label-md text-label-md font-semibold hover:bg-tertiary hover:text-on-tertiary transition-all" data-path="faculty-and-rd" href="#">
+<span>Open Faculty Portal</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Role 4: For Deans & TPOs -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">analytics</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant">Leadership &amp; TPOs</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">For Deans &amp; TPOs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Real-time institutional readiness metrics, NAAC/NBA criteria 2 &amp; 5 audit sync, and corporate MoU trackers.
+            </p>
+<ul class="mt-space-md space-y-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> NIRF / NAAC Metric Exporter
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Branch-wise Placement Analytics
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Digital MoU Management Center
+              </li>
+</ul>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-surface-container">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-tint hover:text-on-primary transition-all" data-path="institution-analytics" href="#">
+<span>View Institution Analytics</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS & IMPACT METRICS -->
+<section class="py-space-3xl bg-surface relative">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<!-- Metrics Bar -->
+<div class="bg-gradient-to-r from-primary via-primary-container to-secondary rounded-2xl p-space-lg md:p-space-xl text-on-primary shadow-xl mb-space-3xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg text-center divide-y md:divide-y-0 md:divide-x divide-on-primary/20">
+<div class="pt-space-sm md:pt-0">
+<span class="font-display-lg text-display-lg font-black tracking-tight block">₹18.4 LPA</span>
+<span class="font-body-md text-body-md text-on-primary-container mt-1 block">Average Dream CTC for Verified Graduates</span>
+</div>
+<div class="pt-space-sm md:pt-0">
+<span class="font-display-lg text-display-lg font-black tracking-tight block">14 Days</span>
+<span class="font-body-md text-body-md text-on-primary-container mt-1 block">Average Internship Match-to-Offer Window</span>
+</div>
+<div class="pt-space-sm md:pt-0">
+<span class="font-display-lg text-display-lg font-black tracking-tight block">98.4%</span>
+<span class="font-body-md text-body-md text-on-primary-container mt-1 block">Faculty Approval Rate on Verified Milestones</span>
+</div>
+</div>
+</div>
+<!-- Testimonials Header -->
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-widest text-primary">Tripartite Voices</span>
+<h2 class="font-headline-lg text-headline-lg font-extrabold text-on-surface mt-1">
+          Validated Across Campuses and Boardrooms
+        </h2>
+</div>
+<!-- 3 Testimonial Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Student Testimonial -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "SkillBridge pointed out that while my university syllabus taught C++, top cloud teams required Kubernetes and gRPC. The platform generated a 4-week micro-project that directly got me placed at Google Cloud."
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover ring-2 ring-primary-fixed" data-alt="Professional headshot of a confident young South Asian male software engineer with glasses, smiling in modern campus backdrop, natural light, high detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQfXORohlaO-DBiuM9PUOktVmROS1XOiLVGwR4ZXv8kyfLhR4F8C5h8XemIpfoL7v7aANGFfkxERVzG3ala0lR4eCy6fMEBadUNFCU_9CGfjaRKIc7SYlMiCqLRhnGdt6eDYE7Iq-5-K1aFpHNpvbn6Uq6vSDtsLZEVD9mw3eCYZ3Eby-2rEzSKKIV09zDpi3fphHBy6TusZjYvU-khUgLXSXJ9463RSa7izxpVV-ywYlI_lvh9j9NrA"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface leading-tight">Rohan Varma</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cloud Solutions Engineer • Placed at Google Cloud</span>
+</div>
+</div>
+</div>
+<!-- Industry Testimonial -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "Our engineering managers spend zero hours sifting through fake resumes now. The compatibility radar and pre-verified Git repos mean the students we interview are already 85%+ matched for immediate team contributions."
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover ring-2 ring-secondary-container" data-alt="Studio portrait of an Indian female corporate Vice President in business formal attire, navy blue blazer, warm corporate lighting, modern high-tech office background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcv5wWCBHy-F_qJoJOceAlEkefgGuy7P2Q29k5Fb9YTSS3pj_Af6X8H_n9tb5nLnpiyFhX2mDduR2s1QfmbSX7wIP0I0yyj5MEy6DuSne3zqkO9krHa0VeY5VRqmt_A0CAvL9k16X4rnuTDrOri_Z7zJKRBM-feDwNQagkm2VDs41ojXymlo4Lsdf0OnkVsMzxFOWZpa1qSr3gHCq0NOrrGZcsizZfqXKVeoZIVOw1y8ltrJ1zIZBuxQ"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface leading-tight">Sunita Deshmukh</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">VP Human Resources • Tech Mahindra</span>
+</div>
+</div>
+</div>
+<!-- Dean Testimonial -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "NAAC Criterion 2.5 and 5.2 auditing used to take our teams three months of paperwork. With SkillBridge's automated NOC flow and real-time accreditation sync, reporting is now instantaneous and completely audit-proof."
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover ring-2 ring-tertiary-fixed" data-alt="Distinguished senior academic male professor in formal academic library setting, thoughtful expression, silver hair, crisp attire, warm academic ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc8jgOtVzauQVpC2RDs4a1sGbGRMLnRyz1C-gUmIQ3NuvXMHeajm0m3i7UELmLgG2kg2ZkSLUPg0v9zaT97VPCuLUxnimUxyU7xv_9NFrytlgFpEaZ5ykv1fb7t2DOinInvisTKG6VNiDdiCHMQ9b7qvew0OdWJI22zaqwigzPlMcT_qB02QhV-uRCFRHLcPrIUKHYoofuD9piWoUKrr0_NI-l5EKCJl6qAkqeR41bFAw9TtLdvEb1EA"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface leading-tight">Dr. K. S. Ramanujan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dean of Academics • RVCE Bengaluru</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL CTA HERO BANNER WITH QUICK SIGN-UP -->
+<section class="py-space-3xl bg-surface-container-low relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="bg-inverse-surface rounded-3xl p-space-xl lg:p-space-3xl text-inverse-on-surface shadow-2xl relative overflow-hidden">
+<!-- Subtle background shapes -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary-container/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -top-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-3xl mx-auto text-center relative z-10">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-widest text-secondary-fixed">
+            Smart India Hackathon Initiative 2024
+          </span>
+<h2 class="font-headline-lg text-headline-lg md:text-display-lg font-black mt-2 leading-tight">
+            Ready to transform academia-industry synergy?
+          </h2>
+<p class="font-body-lg text-body-lg text-inverse-on-surface/80 mt-space-sm max-w-xl mx-auto">
+            Join over 200 premier technical institutions and 1,500 corporate hiring teams. Activate your campus pilot in less than 48 hours.
+          </p>
+<!-- Quick Sign-up Email Form -->
+<form class="mt-space-xl flex flex-col sm:flex-row items-center justify-center gap-space-xs max-w-lg mx-auto" onsubmit="event.preventDefault(); document.getElementById('cta-success').classList.remove('hidden');">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-lg">mail</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="Enter college or official corporate email..." required="" type="email"/>
+</div>
+<button class="w-full sm:w-auto shrink-0 px-6 py-3 rounded-lg bg-primary-container text-on-primary font-title-md text-title-md font-semibold hover:bg-primary transition-all shadow-md flex items-center justify-center gap-2" type="submit">
+<span>Get Access</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</form>
+<div class="hidden mt-space-sm p-3 rounded-lg bg-secondary/20 text-secondary-fixed font-label-md text-label-md max-w-md mx-auto" id="cta-success">
+            ✓ Registration received! The SIH Academic Cell will dispatch onboarding credentials shortly.
+          </div>
+<div class="mt-space-lg flex flex-wrap items-center justify-center gap-space-md text-inverse-on-surface/60 font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-secondary-fixed">check_circle</span> Instant AICTE Compliance Sync</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-secondary-fixed">check_circle</span> Zero Infrastructure Overhead</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-secondary-fixed">check_circle</span> Free for Participating SIH Campuses</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest mt-auto"><div class="max-w-container-max mx-auto px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-5 gap-space-lg pb-space-lg"><div class="md:col-span-2 flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-bold">SkillBridge</span><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full">SIH 2024</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Unified Academia-Industry Convergence Engine. Empowering student employability, dynamic university curriculum alignment, and data-backed corporate talent pipelines under the Smart India Hackathon initiative.</p></div><div class="flex flex-col gap-space-2xs"><span class="font-label-md text-label-md font-bold text-on-surface">Student Hub</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Skill Assessments</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Internship Portal</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Verified Portfolio</a></div><div class="flex flex-col gap-space-2xs"><span class="font-label-md text-label-md font-bold text-on-surface">Industry &amp; Faculty</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Recruiter ATS Engine</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Talent Analytics</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Faculty R&amp;D Matching</a></div><div class="flex flex-col gap-space-2xs"><span class="font-label-md text-label-md font-bold text-on-surface">Institutional Help</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Curriculum Intelligence</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">NIRF &amp; NAAC Metric Sync</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Support &amp; Documentation</a></div></div><div class="flex flex-col md:flex-row items-center justify-between gap-space-sm pt-space-md text-on-surface-variant font-label-sm text-label-sm"><span>© 2024 SkillBridge • Ministry of Education &amp; AICTE Innovation Cell Initiative</span><div class="flex items-center gap-space-md"><span>National Skill Qualification Framework (NSQF) Compliant</span><span>ISO 27001 Certified Infrastructure</span></div></div></div></footer><script src="../shared/auth.js"></script>
+<script src="../shared/nav.js"></script>
+</body></html>

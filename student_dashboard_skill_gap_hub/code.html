@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c7c4d8", "inverse-on-surface": "#eef0ff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-background": "#131b2e", "on-primary-fixed": "#0f0069", "error": "#ba1a1a", "secondary-container": "#86f2e4", "inverse-surface": "#283044", "inverse-primary": "#c3c0ff", "on-error-container": "#93000a", "outline": "#777587", "secondary-fixed-dim": "#6bd8cb", "primary-container": "#4f46e5", "surface-container-lowest": "#ffffff", "secondary-fixed": "#89f5e7", "surface-container-highest": "#dae2fd", "surface-tint": "#4d44e3", "surface-dim": "#d2d9f4", "tertiary": "#004c76", "primary-fixed": "#e2dfff", "secondary": "#006a61", "surface-variant": "#dae2fd", "surface-container": "#eaedff", "on-secondary-fixed": "#00201d", "surface-bright": "#faf8ff", "primary-fixed-dim": "#c3c0ff", "background": "#faf8ff", "on-surface": "#131b2e", "tertiary-container": "#00659a", "on-primary-fixed-variant": "#3323cc", "on-secondary-container": "#006f66", "primary": "#3525cd", "surface-container-high": "#e2e7ff", "on-tertiary": "#ffffff", "on-surface-variant": "#464555", "on-secondary-fixed-variant": "#005049", "on-tertiary-container": "#bedfff", "on-tertiary-fixed-variant": "#004b73", "on-primary": "#ffffff", "surface": "#faf8ff", "tertiary-fixed": "#cce5ff", "tertiary-fixed-dim": "#93ccff", "on-tertiary-fixed": "#001d31", "on-primary-container": "#dad7ff", "on-error": "#ffffff", "surface-container-low": "#f2f3ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-tablet": "1rem", "gutter-mobile": "0.75rem", "space-2xs": "0.25rem", "margin-mobile": "1rem", "container-max": "1440px", "space-md": "1rem", "space-xl": "2rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "space-2xl": "3rem", "gutter-desktop": "1.5rem", "margin-desktop": "2rem", "space-3xl": "4rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "data-mono": ["JetBrains Mono"], "headline-md": ["Inter"], "display-lg": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "title-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "data-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-surface-container-high py-1 px-margin-desktop text-center text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>Smart India Hackathon 2026 Demo Mode • Live Data Active</span></div><div class="h-20 max-w-container-max mx-auto px-margin-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md shrink-0"><img alt="SkillBridge Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vtb0bo0ZiQfb10ngN-iZsavE7I4YMuRg6hNS5YvDiiVecaB29kE6NQDrSmvLOKTvvMZvToRMUnvye79sfj8O6atOmkYove-haONv3TXTCY_eocVobF_MUJlYQHmta04wymi3VBsR17_YacKVfjvtVXCeGlvM_DWfMhrKjc1VTmBeNk4xUM3BUEN12-aifHt9OK9zjVgvhpyn9CcBwmzu2gNsVIWJleSm6w-zhcEEmbbVgIS-P04O6udyg"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-bold tracking-tight">SkillBridge</span><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full">SIH 2026 Finalist</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Academia • Industry Portal</span></div></div><nav class="hidden xl:flex items-center gap-space-xs shrink-0" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a aria-current="page" class="transition-colors px-3 py-2 bg-surface-container-high text-on-surface font-semibold rounded-lg" data-path="student-hub" href="#">Student Hub</a><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" data-path="industry-partner" href="../industry_recruiter_matching_engine/code.html">Industry Partner</a><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" data-path="faculty-and-rd" href="../faculty_r_d_fdp_mentorship_portal/code.html">Faculty &amp; R&amp;D</a><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors px-3 py-2 rounded-lg font-label-md text-label-md" data-path="institution-analytics" href="../institution_analytics_tpo_intelligence/code.html">Institution Analytics</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="hidden md:flex items-center bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface-variant gap-space-xs"><span class="material-symbols-outlined text-sm">search</span><span class="font-body-sm text-body-sm text-outline">Search skills, internships...</span><kbd class="bg-surface-container text-on-surface-variant font-data-mono text-data-mono px-1.5 py-0.5 rounded">⌘K</kbd></div><div id="sb-role-pill" class="flex items-center gap-space-2xs bg-surface-container px-2.5 py-1.5 rounded-lg text-on-surface font-label-sm text-label-sm cursor-pointer hover:bg-surface-container-high transition-colors"><span class="font-semibold">Role:</span><span class="text-primary-container font-semibold">Student</span><span class="material-symbols-outlined text-sm">expand_more</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg hover:bg-surface-container transition-colors text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-base">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-on-error font-data-mono text-[10px] rounded-full flex items-center justify-center font-bold">3</span></button><div id="sb-user-area" class="flex items-center gap-space-xs pl-space-xs border-l border-surface-container-high"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5u40Xc6bmyTj1TLOC8oUVTQ0LRgkEOcxwNWwiJokVm6akAL-FKpeTlOopg8CgSEWAJ2ryvGIHhP-cM54-jvA19P4QEcE9wDTA4DPyX_C09J3hAti0x8YKg2O4GB6ALjQnKS8sNRCmb-UOzmGg61um_d2rbkJAjNcBbehONtg6Uy6PWi9gx6qz6spd4GMPmrjlVcuKFZJofgakdzSboTZ4Lup0FrWtJzauWC8Kps0my1Ws4Y7hvtYduw"/><span class="material-symbols-outlined absolute -bottom-1 -right-1 text-[12px] bg-secondary text-on-secondary rounded-full p-0.5">verified</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Aarav Sharma</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">IIT Delhi • B.Tech</span></div><span class="material-symbols-outlined text-sm text-on-surface-variant cursor-pointer">arrow_drop_down</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle Top Atmospheric Ambient Background -->
+<div class="relative w-full overflow-hidden bg-surface pb-space-3xl">
+<div class="absolute top-0 right-1/4 w-96 h-96 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-48 left-10 w-80 h-80 bg-secondary-fixed/25 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop pt-space-lg flex flex-col gap-space-xl">
+
+<!-- 0. Data Entry & Live Graph Calculator Drawer -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm border border-primary-container/30">
+  <div class="flex items-center justify-between cursor-pointer" onclick="document.getElementById('student-input-form').classList.toggle('hidden')">
+    <div class="flex items-center gap-space-xs">
+      <span class="material-symbols-outlined text-primary text-xl">tune</span>
+      <h3 class="font-title-md text-title-md font-bold text-on-surface">Data Input &amp; Dynamic Graph Calculator</h3>
+      <span class="bg-primary-fixed text-on-primary-fixed font-data-mono text-data-mono px-2 py-0.5 rounded font-semibold">Enter Your Data Below</span>
+    </div>
+    <div class="flex items-center gap-2 text-primary font-label-md font-semibold">
+      <span>Edit Parameters</span>
+      <span class="material-symbols-outlined text-sm">expand_more</span>
+    </div>
+  </div>
+  <div id="student-input-form" class="mt-space-md pt-space-md border-t border-surface-container-high grid grid-cols-1 md:grid-cols-3 gap-space-md">
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">STUDENT NAME</label>
+      <input type="text" id="inp-student-name" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="e.g. Aarav Sharma">
+    </div>
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">INSTITUTION</label>
+      <input type="text" id="inp-student-inst" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="e.g. Silver Oak Institute of Tech">
+    </div>
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">CGPA (OUT OF 10.0)</label>
+      <input type="number" step="0.1" min="0" max="10" id="inp-student-cgpa" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="8.5">
+    </div>
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">SKILLS (COMMA SEPARATED)</label>
+      <input type="text" id="inp-student-skills" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="Python, JavaScript, Docker, System Design">
+    </div>
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">PROBLEM SOLVING SCORE (0-100)</label>
+      <input type="number" min="0" max="100" id="inp-student-prob" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="80">
+    </div>
+    <div>
+      <label class="block font-label-sm text-on-surface-variant font-bold mb-1">COMMUNICATION SCORE (0-100)</label>
+      <input type="number" min="0" max="100" id="inp-student-comm" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="85">
+    </div>
+    <div class="md:col-span-3 flex flex-wrap items-center justify-between gap-2">
+      <button onclick="openSemMarksModal()" class="bg-surface-container-high text-primary font-label-md px-4 py-2.5 rounded-lg font-bold hover:bg-surface-container transition-colors flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-base">school</span>
+        + Upload 8-Sem Marks &amp; Achievements
+      </button>
+      <button onclick="applyStudentDataInputs()" class="bg-primary text-on-primary font-label-md px-6 py-2.5 rounded-lg font-bold shadow hover:bg-primary-container transition-colors flex items-center gap-2">
+        <span class="material-symbols-outlined text-base">analytics</span>
+        Calculate &amp; Update Graphs Live
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 1. Hero Identity & Placement Readiness Banner -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg md:p-space-xl shadow-sm transition-all duration-300 hover:shadow-md">
+<div class="absolute -right-16 -bottom-16 w-64 h-64 bg-surface-container-high/60 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg relative z-10">
+<!-- Student Identity Information -->
+<div class="flex items-start md:items-center gap-space-md">
+<div class="relative shrink-0">
+<img class="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover shadow-sm ring-4 ring-surface-container-low" data-alt="Student profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5XurhhCai0Z8BoncyidwCQyW5YCUTIxJGoGi7ui9c5xfQZOTURSOifS-DLmeGWkmu3N7fGw8uKXGNVWnfx-Ln27OMJvkYAl6btvSwUKsutlaqfZcefhUgHpAHeAE8DibJnYJEsU7ez27-GoJjNf0UDAzNeguN4swrm9n3G1xyr7rtLbdhsfuY11yHTKSGyrQgvqQej17gpwds8ZAM79VrwoSGcCPcP4clBz8wBkI9DNpUB1lEg2ZiKw"/>
+<span class="absolute -bottom-1 -right-1 bg-secondary text-on-secondary rounded-full p-1 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span id="student-name" class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Aarav Sharma</span>
+<span id="student-id-badge" class="bg-surface-container-high text-primary font-data-mono text-data-mono font-semibold px-2 py-0.5 rounded">ID: SB-2024-8841</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Placement Active
+                </span>
+</div>
+<p id="student-dept-year" class="font-body-md text-body-md text-on-surface-variant font-medium">
+                B.Tech Computer Science &amp; Engineering • 4th Year
+              </p>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-space-2xs font-label-md text-label-md text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary">account_balance</span>
+                  <span id="student-inst-name">Silver Oak Institute of Tech</span>
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">analytics</span>
+                  CGPA: <span id="student-cgpa-val">9.14</span> / 10.0
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">workspace_premium</span>
+                  Academic Index Verified
+                </span>
+</div>
+</div>
+</div>
+<!-- Readiness Index Badge & Quick Actions -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md w-full lg:w-auto shrink-0">
+<!-- Readiness Meter Stat -->
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-14 h-14 transform -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle id="readiness-circle" class="text-primary-container stroke-round transition-all duration-700" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="20.09" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<span id="readiness-pct" class="absolute font-data-mono text-title-md font-bold text-on-surface">84%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Placement Readiness</span>
+<span id="readiness-status" class="font-title-md text-title-md text-secondary font-bold">Optimal / Day 1 Ready</span>
+<span class="font-data-mono text-[10px] text-outline">Calculated from entered inputs</span>
+</div>
+</div>
+<!-- Action Buttons Stack -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-space-xs">
+<button class="flex items-center justify-center gap-space-xs bg-primary-container text-on-primary font-label-md text-label-md px-space-md py-2 rounded-lg shadow-sm hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-sm">quiz</span>
+<span>Take AI Skill Assessment</span>
+</button>
+<div class="flex gap-space-xs">
+<button class="flex-1 flex items-center justify-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-3 py-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Export PDF</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-3 py-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">send</span>
+<span>Applications (4)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Skill Profile Overview (Circular Rings & Metrics Grid) -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Technical Skill Readiness Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Competency 01</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Technical Skills</h3>
+</div>
+<span class="material-symbols-outlined text-primary-container bg-surface-container p-2 rounded-lg text-lg">code</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="relative w-20 h-20 shrink-0 flex items-center justify-center">
+<svg class="w-20 h-20 transform -rotate-90" viewbox="0 0 56 56">
+<circle class="text-surface-container" cx="28" cy="28" fill="transparent" r="23" stroke="currentColor" stroke-width="5"></circle>
+<circle class="text-primary-container" cx="28" cy="28" fill="transparent" r="23" stroke="currentColor" stroke-dasharray="144.5" stroke-dashoffset="17.34" stroke-linecap="round" stroke-width="5"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-data-mono text-headline-sm font-bold text-on-surface">88%</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-semibold text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span> +6.4% this month
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validated through 8 coding audits and lab checkouts</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-outline font-data-mono text-data-mono">
+<span>Core: Backend &amp; Cloud</span>
+<span class="text-primary font-semibold">Tier A1</span>
+</div>
+</div>
+<!-- Industry Aptitude & Problem Solving -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Competency 02</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Problem Solving</h3>
+</div>
+<span class="material-symbols-outlined text-tertiary-container bg-surface-container p-2 rounded-lg text-lg">psychology</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="relative w-20 h-20 shrink-0 flex items-center justify-center">
+<svg class="w-20 h-20 transform -rotate-90" viewbox="0 0 56 56">
+<circle class="text-surface-container" cx="28" cy="28" fill="transparent" r="23" stroke="currentColor" stroke-width="5"></circle>
+<circle class="text-tertiary" cx="28" cy="28" fill="transparent" r="23" stroke="currentColor" stroke-dasharray="144.5" stroke-dashoffset="30.34" stroke-linecap="round" stroke-width="5"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-data-mono text-headline-sm font-bold text-on-surface">79%</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-semibold text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check_circle</span> Industry Baseline Met
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Algorithmic complexity, concurrency &amp; data models</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-outline font-data-mono text-data-mono">
+<span>Percentile: Top 9.2%</span>
+<span class="text-tertiary font-semibold">Strong</span>
+</div>
+</div>
+<!-- Soft Skills & Communication -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Competency 03</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Communication &amp; EQ</h3>
+</div>
+<span class="material-symbols-outlined text-secondary bg-surface-container p-2 rounded-lg text-lg">forum</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="relative w-20 h-20 shrink-0 flex items-center justify-center">
+<svg class="w-20 h-20 transform -rotate-90" viewbox="0 0 56 56">
+<circle class="text-surface-container" cx="28" cy="28" fill="transparent" r="23" stroke="currentColor" stroke-width="5"></circle>
+<circle class="text-secondary" cx="28" cy="28" fill="transparent" r="23" stroke="currentColor" stroke-dasharray="144.5" stroke-dashoffset="21.67" stroke-linecap="round" stroke-width="5"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-data-mono text-headline-sm font-bold text-on-surface">85%</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-semibold text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> Interview Ready
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Peer review, viva score &amp; tech presentation rubrics</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-outline font-data-mono text-data-mono">
+<span>Faculty Rating: 4.8 / 5</span>
+<span class="text-secondary font-semibold">Excellent</span>
+</div>
+</div>
+<!-- Academic & Faculty Capstone Verification Card -->
+<div class="bg-surface-container-high p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Accreditation</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Verified Credentials</h3>
+</div>
+<span class="material-symbols-outlined text-on-surface p-1.5 bg-surface-container-lowest rounded-lg text-lg">military_tech</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between bg-surface-container-lowest p-2 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-base">verified_user</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Micro-Credentials</span>
+</div>
+<span class="font-data-mono text-label-md font-bold text-on-surface">12 Earned</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-2 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">school</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Faculty Capstones</span>
+</div>
+<span class="font-data-mono text-label-md font-bold text-secondary">3 Approved</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>AICTE • NSQF Level 7</span>
+<a class="text-primary-container font-semibold hover:underline flex items-center gap-1" href="#">
+              Verify On-Chain <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 3. Skill Gap Analysis Card (In-depth Visual Bar Comparison) -->
+<section class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">compare_arrows</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Curriculum-to-Industry Skill Gap Analysis</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Target Career Role: <span class="font-semibold text-on-surface">Full Stack Cloud Engineer / Backend Systems</span>
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container-low p-1.5 rounded-lg">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface px-2 py-1 rounded bg-surface-container-lowest shadow-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span> Student Proficiency
+            </span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant px-2 py-1">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span> Industry Benchmark
+            </span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary px-2 py-1 font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Strength
+            </span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-error px-2 py-1 font-semibold">
+<span class="w-2 h-2 rounded-full bg-error"></span> Urgent Gap
+            </span>
+</div>
+</div>
+<!-- Analytical Breakdown Grid -->
+<div class="grid grid-cols-1 gap-space-md">
+<!-- Competency 1: System Design & Microservices (GAP) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md font-bold text-on-surface">System Design &amp; Microservices</span>
+<span class="bg-error-container text-on-error-container font-data-mono text-data-mono font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">arrow_downward</span> Gap: -15%
+                </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="bg-surface-container text-primary-container font-label-sm text-label-sm font-semibold px-2.5 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">school</span> Recommendation: Complete Distributed Systems Module
+                </span>
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1 rounded font-semibold transition-colors">Enroll</button>
+</div>
+</div>
+<!-- Double Bar Visual -->
+<div class="space-y-1.5 pt-1">
+<!-- Student Bar -->
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-body-sm w-28 text-on-surface-variant shrink-0">Current: 70%</span>
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-700" style="width: 70%"></div>
+</div>
+</div>
+<!-- Benchmark Bar -->
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-body-sm w-28 text-outline shrink-0">Industry: 85%</span>
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full transition-all duration-700" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Competency 2: Docker, Kubernetes & CI/CD (STRENGTH) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md font-bold text-on-surface">Docker, Kubernetes &amp; CI/CD Pipelines</span>
+<span class="bg-secondary-container text-on-secondary-container font-data-mono text-data-mono font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">arrow_upward</span> Strength: +8%
+                </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="bg-surface-container text-secondary font-label-sm text-label-sm font-semibold px-2.5 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> Verified by AWS Academy • Cloud Architect Badge
+                </span>
+</div>
+</div>
+<!-- Double Bar Visual -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-body-sm w-28 text-on-surface-variant shrink-0">Current: 88%</span>
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-700" style="width: 88%"></div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-body-sm w-28 text-outline shrink-0">Industry: 80%</span>
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full transition-all duration-700" style="width: 80%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Competency 3: Python & Go Lang (STRENGTH) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md font-bold text-on-surface">Python &amp; Go Lang (High-Throughput Services)</span>
+<span class="bg-secondary-container text-on-secondary-container font-data-mono text-data-mono font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">arrow_upward</span> Strength: +7%
+                </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="bg-surface-container text-secondary font-label-sm text-label-sm font-semibold px-2.5 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">military_tech</span> Gold Badge • Top 3% in National Hackathon
+                </span>
+</div>
+</div>
+<!-- Double Bar Visual -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-body-sm w-28 text-on-surface-variant shrink-0">Current: 92%</span>
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-700" style="width: 92%"></div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-body-sm w-28 text-outline shrink-0">Industry: 85%</span>
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full transition-all duration-700" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Competency 4: SQL & Vector Databases (GAP) -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md font-bold text-on-surface">SQL, Vector Databases (pgvector) &amp; Caching</span>
+<span class="bg-error-container text-on-error-container font-data-mono text-data-mono font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">arrow_downward</span> Gap: -16%
+                </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="bg-surface-container text-primary-container font-label-sm text-label-sm font-semibold px-2.5 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">event</span> Recommendation: Enroll in PgVector Workshop (This Friday)
+                </span>
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1 rounded font-semibold transition-colors">Join Workshop</button>
+</div>
+</div>
+<!-- Double Bar Visual -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-body-sm w-28 text-on-surface-variant shrink-0">Current: 62%</span>
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-700" style="width: 62%"></div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-body-sm w-28 text-outline shrink-0">Industry: 78%</span>
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full transition-all duration-700" style="width: 78%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Interactive Skill Assessment Modal / Embedded Live Simulation -->
+<section class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined">network_check</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Adaptive Assessment #4: Distributed Systems &amp; Cloud Architecture</h3>
+<span class="bg-error-container text-on-error-container font-data-mono text-data-mono font-semibold px-2 py-0.5 rounded">Hard • Industry Verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validated live against Google &amp; Razorpay backend benchmarks</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-3 py-1.5 rounded-lg text-primary font-data-mono text-label-md font-bold">
+<span class="material-symbols-outlined text-sm animate-pulse">timer</span>
+<span>18m 42s remaining</span>
+</div>
+<span class="font-data-mono text-label-md text-outline">Question 14 of 20</span>
+</div>
+</div>
+<!-- Progress Track -->
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 70%"></div>
+</div>
+<!-- Question Card Box -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">Microservices • Resiliency Pattern</span>
+<span class="font-label-sm text-label-sm text-outline">Step 3 of 5 In-depth Module</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium">
+            In a high-throughput microservices topology handling &gt;50,000 req/sec, which architectural pattern prevents cascading failures when downstream payment settlement webhooks experience sudden P99 latency degradation?
+          </p>
+<!-- Code Snippet Area -->
+<div class="bg-inverse-surface text-inverse-on-surface p-space-md rounded-lg font-data-mono text-data-mono overflow-x-auto">
+<pre class="leading-relaxed"><code><span class="text-secondary-fixed">// Circuit Breaker Implementation snippet</span>
+type CircuitBreaker struct {
+    failureThreshold int64
+    resetTimeout     time.Duration
+    consecutiveFails int64
+    state            State <span class="text-outline-variant">// StateClosed | StateHalfOpen | StateOpen</span>
+}</code></pre>
+</div>
+<!-- Radio Selection List -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-xs pt-space-xs">
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="mt-1 accent-primary-container" name="assessment_q" type="radio"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Circuit Breaker with Exponential Backoff Fallback</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Trips open after consecutive thresholds to divert traffic to graceful degrade queues.</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="mt-1 accent-primary-container" name="assessment_q" type="radio"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Synchronous Two-Phase Commit (2PC) Retries</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Forces global blocking locks across all upstream caller nodes until state confirms.</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="mt-1 accent-primary-container" name="assessment_q" type="radio"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Stateless Round-Robin DNS Re-routing</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Distributes incoming requests blindly across available nodes without health probes.</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="mt-1 accent-primary-container" name="assessment_q" type="radio"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Unbounded In-Memory Dead Letter Buffering</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Allocates infinite memory heaps on client pods to accumulate failing payloads.</span>
+</div>
+</label>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<button class="font-label-md text-label-md text-outline hover:text-on-surface transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">flag</span> Flag for Review
+            </button>
+<div class="flex items-center gap-space-xs">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-space-md py-2 rounded-lg transition-colors">
+                Previous
+              </button>
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-2 rounded-lg shadow-sm transition-all flex items-center gap-1">
+                Save &amp; Continue <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 5 & 6. Bento Split: Recommendations Matrix & Active Applications Tracker -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left Column: Personalized AI Recommendations (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-xl">auto_awesome</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">AI Matched Internships</h3>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-data-mono text-data-mono font-semibold px-2 py-0.5 rounded-full">
+                Live ATS Sync Active
+              </span>
+</div>
+<div id="ai-matched-jobs-container" class="space-y-space-md">
+<!-- Internship Card 1: Cisco Systems -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm hover:shadow-sm transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center font-bold text-primary text-lg shadow-sm">
+                    CS
+                  </div>
+<div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface">Cloud Platform Intern</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cisco Systems • Cloud Infrastructure Group</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-secondary-container text-on-secondary-container font-data-mono text-label-md font-bold px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-xs">bolt</span>
+                  96% Match
+                </div>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-outline">location_on</span> Bangalore / Hybrid</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-outline">payments</span> ₹35,000 / month</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">verified</span> Direct TPO Quota</span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs">
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container text-on-surface-variant text-[11px] font-semibold px-2 py-0.5 rounded">Docker</span>
+<span class="bg-surface-container text-on-surface-variant text-[11px] font-semibold px-2 py-0.5 rounded">Go Lang</span>
+<span class="bg-surface-container text-on-surface-variant text-[11px] font-semibold px-2 py-0.5 rounded">Kubernetes</span>
+</div>
+<button class="bg-primary-container text-on-primary font-label-sm text-label-sm px-space-md py-1.5 rounded-lg hover:bg-primary transition-colors font-semibold">
+                  Apply via University NOC
+                </button>
+</div>
+</div>
+<!-- Internship Card 2: Razorpay -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm hover:shadow-sm transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center font-bold text-tertiary-container text-lg shadow-sm">
+                    RZ
+                  </div>
+<div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface">AI Backend Engineer Intern</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Razorpay • Core Platform Team</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-secondary-container text-on-secondary-container font-data-mono text-label-md font-bold px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-xs">bolt</span>
+                  92% Match
+                </div>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-outline">location_on</span> Bangalore, Karnataka</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-outline">payments</span> ₹40,000 / month</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">check_circle</span> Verified Faculty NOC Ready</span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs">
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container text-on-surface-variant text-[11px] font-semibold px-2 py-0.5 rounded">Python FastAPI</span>
+<span class="bg-surface-container text-on-surface-variant text-[11px] font-semibold px-2 py-0.5 rounded">pgvector</span>
+<span class="bg-surface-container text-on-surface-variant text-[11px] font-semibold px-2 py-0.5 rounded">AWS Lambda</span>
+</div>
+<button class="bg-primary-container text-on-primary font-label-sm text-label-sm px-space-md py-1.5 rounded-lg hover:bg-primary transition-colors font-semibold">
+                  Fast-Track Submit
+                </button>
+</div>
+</div>
+<!-- Recommended Upskilling Pathway -->
+<div class="bg-primary-fixed/30 p-space-md rounded-xl flex items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5">model_training</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Sponsored Skill Bridge</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Hands-on Apache Kafka &amp; Event-driven Systems</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3-day intensive masterclass led by IIT Delhi Faculty &amp; Confluent certified mentors</span>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg font-semibold shrink-0 transition-colors">
+                Claim Grant
+              </button>
+</div>
+</div>
+</div>
+<!-- Right Column: Active Applications & Live Mentorship (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Applications Tracker Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container">rule</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Live Applications</h3>
+</div>
+<span class="font-data-mono text-label-md font-bold text-on-surface">3 Active</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Application 1: Google -->
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Google Summer Cohort 2025</span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded font-semibold">Under Review</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant">
+<span>Software Engineering Intern</span>
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">done_all</span> NOC Verified
+                  </span>
+</div>
+</div>
+<!-- Application 2: Microsoft -->
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Microsoft India (Azure Team)</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded font-bold">Interview</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant">
+<span>Cloud Solutions Engineer</span>
+<span class="font-data-mono font-bold text-primary">Tomorrow, 3:00 PM</span>
+</div>
+</div>
+<!-- Application 3: Swiggy Tech -->
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Swiggy Tech</span>
+<span class="bg-secondary-fixed-dim/40 text-secondary font-label-sm text-label-sm px-2 py-0.5 rounded font-bold">Shortlisted</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant">
+<span>Backend SDE Intern</span>
+<span class="font-data-mono text-outline">ATS Score: 94 / 100</span>
+</div>
+</div>
+</div>
+<button class="w-full text-center py-2 text-primary-container font-label-md text-label-md font-semibold hover:bg-surface-container rounded-lg transition-colors">
+              Open Full Recruitment Pipeline (4 Items)
+            </button>
+</div>
+<!-- Upcoming Industry Mentorship Card -->
+<div class="bg-gradient-to-br from-surface-container-lowest to-surface-container-low p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider text-secondary">Verified Mentorship</span>
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+</div>
+<div class="flex items-center gap-space-md">
+<img class="w-14 h-14 rounded-full object-cover shrink-0 shadow-sm ring-2 ring-secondary-container" data-alt="Corporate headshot of Priya Sen, an experienced senior female software engineering leader wearing glasses in a modern high-tech office environment, soft professional lighting with warm ambiance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMjz5TZH-Uu6zLVj3i2zfUNPtlF0664pXFn2gGWaEz7fn4YyqJf84lzegNRzCcwYjk54bw37PfOi3NS4bGFVXYHpgQh8ktolOo629Mb2IrAgxB_UYP9LsDIJOjNAPltEBKvT6qRshqHwgU5wmlx9Jv2BE0po-LPqd2gsYlZX7gvFdf2PMZFjrkQcX_TIgECjThm_SQeGftpZSugoAtur7_Z0IUm4cCf7NNTkpQdpRk-yWaOUDUCorUuQ"/>
+<div class="flex flex-col">
+<h4 class="font-title-md text-title-md font-bold text-on-surface">Priya Sen</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Principal Engineer @ Atlassian</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">IIT Kharagpur Alumna • SIH Mentor</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Session Topic</span>
+<span class="font-body-md text-body-md font-bold text-on-surface">1-on-1 Code &amp; System Architecture Review</span>
+<div class="flex items-center justify-between pt-1 text-primary-container font-data-mono text-data-mono font-semibold">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">schedule</span> Today, 5:30 PM IST</span>
+<span>Google Meet • 45 Mins</span>
+</div>
+</div>
+<button class="w-full bg-secondary hover:bg-on-secondary-container text-on-secondary py-2 rounded-lg font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-sm">video_call</span> Join Session Room
+            </button>
+</div>
+</div>
+</section>
+<!-- 7. Digital Portfolio Quick Preview -->
+<section class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col gap-space-lg mb-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">account_tree</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Unified Digital Career Portfolio</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Cryptographically verified by SkillBridge • Accepted by 450+ Campus Corporate Recruiters
+            </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-lg text-outline font-data-mono text-data-mono">
+<span>skillbridge.in/p/aarav-cs</span>
+<button class="hover:text-on-surface transition-colors" title="Copy public link">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface p-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">share</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- LeetCode / Algorithmic Rating Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">terminal</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">LeetCode Metrics</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-data-mono text-data-mono px-2 py-0.5 rounded font-bold">Top 6%</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-mono text-headline-lg font-bold text-on-surface">1,890</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">Knight Tier</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant pt-space-xs font-data-mono">
+<span>612 Problems Solved</span>
+<span>88.4% Acceptance</span>
+</div>
+</div>
+<!-- GitHub Activity Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">code_blocks</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">GitHub Integration</span>
+</div>
+<span class="bg-surface-container text-primary font-data-mono text-data-mono px-2 py-0.5 rounded font-bold">Synced Live</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-mono text-headline-lg font-bold text-on-surface">412</span>
+<span class="font-body-sm text-body-sm text-outline">Contributions (2024)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant pt-space-xs font-data-mono">
+<span>98 Repositories</span>
+<span class="text-secondary font-semibold">14 Open Source PRs</span>
+</div>
+</div>
+<!-- Faculty Endorsed Badges Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">verified</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">University Badges</span>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed font-data-mono text-data-mono px-2 py-0.5 rounded font-bold">12 Total</span>
+</div>
+<div class="flex flex-wrap gap-1.5 py-1">
+<span class="bg-surface-container-lowest text-on-surface text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">award_star</span>
+                Cloud Microservices
+              </span>
+<span class="bg-surface-container-lowest text-on-surface text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary">verified</span>
+                Distributed Cache
+              </span>
+<span class="bg-surface-container-lowest text-on-surface text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary">star</span>
+                SIH Semi-Finalist
+              </span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+</div>
+</div>
+</div>
+
+<!-- Upload 8-Semester Marks & Achievements Modal (VTU 10-Subject Grading System) -->
+<div id="semMarksModal" class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-center justify-center hidden p-4">
+  <div class="bg-surface-container-lowest max-w-2xl w-full rounded-2xl p-6 shadow-2xl border border-surface-container-high relative max-h-[92vh] overflow-y-auto">
+    <div class="flex items-center justify-between pb-4 border-b border-surface-container-high">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary text-2xl">school</span>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">VTU 8-Semester &amp; 10-Subject Marks Portal</h3>
+          <p class="text-xs text-on-surface-variant">Visvesvaraya Technological University (VTU) SGPA &amp; CGPA Engine</p>
+        </div>
+      </div>
+      <button onclick="closeSemMarksModal()" class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <div class="my-4 space-y-4">
+      <!-- Semester Tabs Nav -->
+      <div class="flex items-center gap-1 overflow-x-auto pb-1 border-b border-surface-container-high" id="vtu-sem-tabs">
+        <button onclick="switchVtuSemTab(1)" id="vtu-tab-1" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-primary text-on-primary shrink-0 transition-colors">Sem 1</button>
+        <button onclick="switchVtuSemTab(2)" id="vtu-tab-2" class="px-3 py-1.5 rounded-lg text-xs font-bold text-on-surface-variant hover:bg-surface-container shrink-0 transition-colors">Sem 2</button>
+        <button onclick="switchVtuSemTab(3)" id="vtu-tab-3" class="px-3 py-1.5 rounded-lg text-xs font-bold text-on-surface-variant hover:bg-surface-container shrink-0 transition-colors">Sem 3</button>
+        <button onclick="switchVtuSemTab(4)" id="vtu-tab-4" class="px-3 py-1.5 rounded-lg text-xs font-bold text-on-surface-variant hover:bg-surface-container shrink-0 transition-colors">Sem 4</button>
+        <button onclick="switchVtuSemTab(5)" id="vtu-tab-5" class="px-3 py-1.5 rounded-lg text-xs font-bold text-on-surface-variant hover:bg-surface-container shrink-0 transition-colors">Sem 5</button>
+        <button onclick="switchVtuSemTab(6)" id="vtu-tab-6" class="px-3 py-1.5 rounded-lg text-xs font-bold text-on-surface-variant hover:bg-surface-container shrink-0 transition-colors">Sem 6</button>
+        <button onclick="switchVtuSemTab(7)" id="vtu-tab-7" class="px-3 py-1.5 rounded-lg text-xs font-bold text-on-surface-variant hover:bg-surface-container shrink-0 transition-colors">Sem 7</button>
+        <button onclick="switchVtuSemTab(8)" id="vtu-tab-8" class="px-3 py-1.5 rounded-lg text-xs font-bold text-on-surface-variant hover:bg-surface-container shrink-0 transition-colors">Sem 8</button>
+      </div>
+
+      <!-- 10 Subject Marks Panel Container -->
+      <div id="vtu-subjects-container" class="bg-surface-container-low p-4 rounded-xl space-y-3">
+        <div class="flex items-center justify-between">
+          <span id="active-sem-title" class="font-title-md text-sm font-bold text-on-surface">Semester 1 (10 Core Subjects)</span>
+          <span id="active-sem-sgpa" class="bg-secondary-container text-on-secondary-container text-xs font-data-mono font-bold px-2.5 py-1 rounded-full">SGPA: 8.50</span>
+        </div>
+        <p class="text-[11px] text-on-surface-variant">Enter marks out of 100 for each of the 10 subjects. VTU Grade Points are computed automatically.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5" id="vtu-10-subject-inputs">
+          <!-- Dynamically generated 10 subject inputs -->
+        </div>
+      </div>
+
+      <!-- Live Calculation Summary Card -->
+      <div class="bg-surface-container p-3.5 rounded-xl flex items-center justify-between text-xs font-data-mono">
+        <div>
+          <span class="text-on-surface-variant block uppercase font-bold text-[10px]">Calculated Cumulative 8-Sem CGPA</span>
+          <span id="vtu-live-cgpa" class="text-lg font-bold text-primary">8.85 / 10.0</span>
+        </div>
+        <div class="text-right">
+          <span class="text-on-surface-variant block uppercase font-bold text-[10px]">VTU Equivalent Percentage</span>
+          <span id="vtu-live-pct" class="text-lg font-bold text-secondary">81.0 %</span>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-xs font-bold text-on-surface-variant mb-1 uppercase">Key Achievements &amp; Certifications</label>
+        <textarea id="achievements-inp" rows="2" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2.5 font-body-md text-on-surface" placeholder="e.g. Smart India Hackathon 2026 Finalist, AWS Certified Cloud Practitioner, 1st Place University Coding Contest"></textarea>
+      </div>
+    </div>
+
+    <div class="flex justify-end gap-3 pt-3 border-t border-surface-container-high">
+      <button onclick="closeSemMarksModal()" class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-semibold text-sm hover:bg-surface-container-high transition-colors">Cancel</button>
+      <button onclick="saveSemMarksAndAchievements()" class="px-5 py-2 rounded-lg bg-primary text-on-primary font-bold text-sm shadow hover:bg-primary-container transition-all flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-base">save</span>
+        Calculate VTU CGPA Live
+      </button>
+    </div>
+  </div>
+</div>
+
+</main><footer class="w-full bg-surface-container-lowest mt-auto"><div class="max-w-container-max mx-auto px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-5 gap-space-lg pb-space-lg"><div class="md:col-span-2 flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-bold">SkillBridge</span><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full">SIH 2026</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Unified Academia-Industry Convergence Engine. Empowering student employability, dynamic university curriculum alignment, and data-backed corporate talent pipelines under the Smart India Hackathon initiative.</p></div><div class="flex flex-col gap-space-2xs"><span class="font-label-md text-label-md font-bold text-on-surface">Student Hub</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Skill Assessments</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Internship Portal</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Verified Portfolio</a></div><div class="flex flex-col gap-space-2xs"><span class="font-label-md text-label-md font-bold text-on-surface">Industry &amp; Faculty</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Recruiter ATS Engine</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Talent Analytics</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Faculty R&amp;D Matching</a></div><div class="flex flex-col gap-space-2xs"><span class="font-label-md text-label-md font-bold text-on-surface">Institutional Help</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Curriculum Intelligence</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">NIRF &amp; NAAC Metric Sync</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Support &amp; Documentation</a></div></div><div class="flex flex-col md:flex-row items-center justify-between gap-space-sm pt-space-md text-on-surface-variant font-label-sm text-label-sm"><span>© 2026 SkillBridge • Ministry of Education &amp; AICTE Innovation Cell Initiative</span><div class="flex items-center gap-space-md"><span>National Skill Qualification Framework (NSQF) Compliant</span><span>ISO 27001 Certified Infrastructure</span></div></div></div></footer><script src="../shared/auth.js"></script>
+<script src="../shared/nav.js"></script>
+<script src="../shared/dynamic_data.js"></script>
+<script>
+  let activeVtuSem = 1;
+  let vtuMarksStore = {};
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initStudentDashboard();
+    window.addEventListener('sb-data-updated', initStudentDashboard);
+  });
+
+  function initVtuMarksStore() {
+    const data = window.SBDynamic.getData();
+    const s = data.student;
+    if (s.vtuSubjectsBySem) {
+      vtuMarksStore = JSON.parse(JSON.stringify(s.vtuSubjectsBySem));
+    } else {
+      vtuMarksStore = {};
+      for (let sem = 1; sem <= 8; sem++) {
+        const baseMarks = Math.min(98, 75 + sem * 2);
+        vtuMarksStore[`sem${sem}`] = [
+          baseMarks, baseMarks + 2, baseMarks - 3, baseMarks + 4, baseMarks,
+          baseMarks - 1, baseMarks + 3, baseMarks + 1, baseMarks - 2, baseMarks + 5
+        ];
+      }
+    }
+  }
+
+  function renderVtuSubjectInputs(semNum) {
+    activeVtuSem = semNum;
+    if (!vtuMarksStore[`sem${semNum}`]) {
+      vtuMarksStore[`sem${semNum}`] = Array(10).fill(85);
+    }
+    const marksArr = vtuMarksStore[`sem${semNum}`];
+
+    // Highlight active tab
+    for (let i = 1; i <= 8; i++) {
+      const tab = document.getElementById(`vtu-tab-${i}`);
+      if (tab) {
+        if (i === semNum) {
+          tab.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-primary text-on-primary shrink-0 transition-colors';
+        } else {
+          tab.className = 'px-3 py-1.5 rounded-lg text-xs font-bold text-on-surface-variant hover:bg-surface-container shrink-0 transition-colors';
+        }
+      }
+    }
+
+    const titleEl = document.getElementById('active-sem-title');
+    if (titleEl) titleEl.textContent = `Semester ${semNum} (10 Core Subjects)`;
+
+    const inputsContainer = document.getElementById('vtu-10-subject-inputs');
+    if (inputsContainer) {
+      const defaultSubjectNames = [
+        'Maths', 'Data Struct', 'Algorithms', 'OS', 'DBMS',
+        'CN', 'Cloud Engg', 'System Design', 'AI/ML', 'Cap Lab'
+      ];
+
+      inputsContainer.innerHTML = marksArr.map((m, idx) => `
+        <div>
+          <label class="block text-[10px] font-bold text-on-surface-variant mb-1 uppercase truncate">${defaultSubjectNames[idx] || 'Sub ' + (idx + 1)}</label>
+          <input type="number" min="0" max="100" value="${m}" oninput="updateVtuSubjectMark(${semNum}, ${idx}, this.value)"
+                 class="w-full bg-surface-container-lowest border border-outline/30 rounded-lg p-1.5 font-data-mono text-xs font-bold text-on-surface text-center" placeholder="85"/>
+        </div>
+      `).join('');
+    }
+
+    recalcVtuLiveSummary();
+  }
+
+  function switchVtuSemTab(semNum) {
+    renderVtuSubjectInputs(semNum);
+  }
+
+  function updateVtuSubjectMark(semNum, subIdx, value) {
+    const val = Math.min(100, Math.max(0, parseInt(value) || 0));
+    if (!vtuMarksStore[`sem${semNum}`]) vtuMarksStore[`sem${semNum}`] = Array(10).fill(80);
+    vtuMarksStore[`sem${semNum}`][subIdx] = val;
+    recalcVtuLiveSummary();
+  }
+
+  function recalcVtuLiveSummary() {
+    // Current semester SGPA
+    const curMarks = vtuMarksStore[`sem${activeVtuSem}`] || [];
+    const sgpa = window.SBDynamic.calcVTUSGPAFromSubjects(curMarks);
+    const sgpaEl = document.getElementById('active-sem-sgpa');
+    if (sgpaEl) sgpaEl.textContent = `Sem ${activeVtuSem} SGPA: ${sgpa.toFixed(2)}`;
+
+    // Overall 8-sem CGPA & Percentage
+    let totalSGPA = 0, semCount = 0;
+    for (let sem = 1; sem <= 8; sem++) {
+      if (vtuMarksStore[`sem${sem}`]) {
+        totalSGPA += window.SBDynamic.calcVTUSGPAFromSubjects(vtuMarksStore[`sem${sem}`]);
+        semCount++;
+      }
+    }
+    const cgpa = semCount > 0 ? Math.round((totalSGPA / semCount) * 100) / 100 : 8.5;
+    const pct = window.SBDynamic.calcVTUPercentage(cgpa);
+
+    const cgpaEl = document.getElementById('vtu-live-cgpa');
+    if (cgpaEl) cgpaEl.textContent = `${cgpa.toFixed(2)} / 10.0`;
+
+    const pctEl = document.getElementById('vtu-live-pct');
+    if (pctEl) pctEl.textContent = `${pct.toFixed(1)} %`;
+  }
+
+  function openSemMarksModal() {
+    initVtuMarksStore();
+    renderVtuSubjectInputs(1);
+
+    const data = window.SBDynamic.getData();
+    if (document.getElementById('achievements-inp')) {
+      document.getElementById('achievements-inp').value = Array.isArray(data.student.achievements)
+        ? data.student.achievements.join(', ')
+        : (data.student.achievements || '');
+    }
+    document.getElementById('semMarksModal')?.classList.remove('hidden');
+  }
+
+  function closeSemMarksModal() {
+    document.getElementById('semMarksModal')?.classList.add('hidden');
+  }
+
+  function saveSemMarksAndAchievements() {
+    const ach = document.getElementById('achievements-inp')?.value.trim() || '';
+
+    // Calculate SGPAs across all 8 sem
+    const semSGPAs = [];
+    for (let sem = 1; sem <= 8; sem++) {
+      const arr = vtuMarksStore[`sem${sem}`] || Array(10).fill(80);
+      semSGPAs.push(window.SBDynamic.calcVTUSGPAFromSubjects(arr));
+    }
+    const overallCGPA = window.SBDynamic.calcStudent8SemCGPA({ vtuSubjectsBySem: vtuMarksStore, semesters: semSGPAs });
+
+    window.SBDynamic.updateData(data => {
+      data.student.vtuSubjectsBySem = vtuMarksStore;
+      data.student.semesters = semSGPAs;
+      data.student.achievements = ach;
+      data.student.cgpa = overallCGPA;
+    });
+
+    closeSemMarksModal();
+    initStudentDashboard();
+    alert(`VTU 8-Semester Marks Saved Successfully!\n\nCalculated CGPA: ${overallCGPA.toFixed(2)}\nVTU Percentage: ${window.SBDynamic.calcVTUPercentage(overallCGPA).toFixed(1)}%`);
+  }
+
+  function initStudentDashboard() {
+    const data = window.SBDynamic.getData();
+    const s = data.student;
+    const r = data.recruiter;
+
+    // Fill form inputs with current values
+    if (document.getElementById('inp-student-name')) document.getElementById('inp-student-name').value = s.name || '';
+    if (document.getElementById('inp-student-inst')) document.getElementById('inp-student-inst').value = s.institution || '';
+    if (document.getElementById('inp-student-cgpa')) document.getElementById('inp-student-cgpa').value = s.cgpa || '';
+    if (document.getElementById('inp-student-skills')) document.getElementById('inp-student-skills').value = (s.skills || []).join(', ');
+    if (document.getElementById('inp-student-prob')) document.getElementById('inp-student-prob').value = s.probSolving || 80;
+    if (document.getElementById('inp-student-comm')) document.getElementById('inp-student-comm').value = s.commScore || 85;
+
+    // Render header identity elements
+    if (document.getElementById('student-name') && s.name) document.getElementById('student-name').textContent = s.name;
+    if (document.getElementById('student-inst-name') && s.institution) document.getElementById('student-inst-name').textContent = s.institution;
+    if (document.getElementById('student-cgpa-val')) document.getElementById('student-cgpa-val').textContent = s.cgpa || '0.0';
+
+    // Calculate Placement Readiness
+    const readiness = window.SBDynamic.calcStudentReadiness(s);
+    const radCircle = document.getElementById('readiness-circle');
+    const radPct = document.getElementById('readiness-pct');
+    const radStatus = document.getElementById('readiness-status');
+
+    if (radPct) radPct.textContent = readiness + '%';
+    if (radCircle) {
+      const offset = 125.6 * (1 - readiness / 100);
+      radCircle.setAttribute('stroke-dashoffset', offset);
+    }
+    if (radStatus) {
+      radStatus.textContent = readiness >= 75 ? 'Optimal / Day 1 Ready' : readiness >= 50 ? 'Developing / Action Required' : 'Foundational / Gap Building';
+    }
+
+    // Render Target Career Role from active jobs
+    const latestJob = (r.jobs && r.jobs.length) ? r.jobs[0] : null;
+    const targetRoleText = document.getElementById('target-career-role');
+    if (targetRoleText && latestJob && latestJob.targetRole) {
+      targetRoleText.textContent = latestJob.targetRole;
+    }
+
+    // Dynamically render Industry Job Releases in AI Matched Internships container
+    const jobsContainer = document.getElementById('ai-matched-jobs-container');
+    if (jobsContainer && r.jobs && r.jobs.length) {
+      jobsContainer.innerHTML = r.jobs.map((job, idx) => {
+        const initials = (job.company || 'CO').slice(0, 2).toUpperCase();
+        const skillsHTML = (job.reqSkills || ['Docker', 'AWS', 'Node.js']).map(sk => 
+          `<span class="bg-surface-container text-on-surface-variant text-[11px] font-semibold px-2 py-0.5 rounded">${sk}</span>`
+        ).join('');
+        const matchPct = Math.min(99, 90 + (idx % 8));
+
+        return `
+          <div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-sm hover:shadow-sm transition-all border border-surface-container-high/50">
+            <div class="flex items-start justify-between gap-space-sm">
+              <div class="flex items-center gap-space-sm">
+                <div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold text-lg shadow-sm">
+                  ${initials}
+                </div>
+                <div>
+                  <h4 class="font-title-md text-title-md font-bold text-on-surface">${job.title}</h4>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">${job.company} • ${job.targetRole || 'Target Role'}</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-1 bg-secondary-container text-on-secondary-container font-data-mono text-label-md font-bold px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-xs">bolt</span>
+                ${matchPct}% Match
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-1">
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-outline">location_on</span> ${job.location || 'Hybrid'}</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-outline">payments</span> ${job.stipend || 'Competitive'}</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">verified</span> Industry Partnership Released</span>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs">
+              <div class="flex flex-wrap gap-1.5">
+                ${skillsHTML}
+              </div>
+              <button onclick="alert('Application sent for ${job.title} at ${job.company}!')" class="bg-primary-container text-on-primary font-label-sm text-label-sm px-space-md py-1.5 rounded-lg hover:bg-primary transition-colors font-semibold">
+                Apply via SkillBridge NOC
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+  }
+
+  function applyStudentDataInputs() {
+    const name = document.getElementById('inp-student-name').value.trim();
+    const inst = document.getElementById('inp-student-inst').value.trim();
+    const cgpa = parseFloat(document.getElementById('inp-student-cgpa').value) || 0;
+    const skillsRaw = document.getElementById('inp-student-skills').value;
+    const skills = skillsRaw.split(',').map(x => x.trim()).filter(Boolean);
+    const prob = parseInt(document.getElementById('inp-student-prob').value) || 0;
+    const comm = parseInt(document.getElementById('inp-student-comm').value) || 0;
+
+    window.SBDynamic.updateData(data => {
+      data.student.name = name;
+      data.student.institution = inst;
+      data.student.cgpa = cgpa;
+      data.student.skills = skills;
+      data.student.probSolving = prob;
+      data.student.commScore = comm;
+    });
+
+    initStudentDashboard();
+    alert('Graphs dynamically recalculated based on your entered data!');
+  }
+</script>
+</body></html>
