@@ -27,9 +27,36 @@
       'faculty-and-rd':        prefix + 'faculty_r_d_fdp_mentorship_portal/code.html',
       'institution-analytics': prefix + 'institution_analytics_tpo_intelligence/code.html',
     };
+
+    const roleToPath = {
+      student:     'student-hub',
+      recruiter:   'industry-partner',
+      faculty:     'faculty-and-rd',
+      institution: 'institution-analytics',
+    };
+
+    const loggedIn = window.SBAuth && window.SBAuth.isLoggedIn();
+    const user     = loggedIn ? window.SBAuth.getUser() : null;
+    const userRole = user ? user.role : null;
+
     document.querySelectorAll('a[data-path]').forEach(a => {
       const path = a.getAttribute('data-path');
       if (pathMap[path]) a.href = pathMap[path];
+
+      if (userRole) {
+        const allowedPath = roleToPath[userRole];
+        if (allowedPath && path !== allowedPath) {
+          a.style.display = 'none';
+          if (a.parentElement && (a.parentElement.tagName === 'LI' || a.parentElement.classList.contains('nav-item'))) {
+            a.parentElement.style.display = 'none';
+          }
+        } else {
+          a.style.display = '';
+          if (a.parentElement && (a.parentElement.tagName === 'LI' || a.parentElement.classList.contains('nav-item'))) {
+            a.parentElement.style.display = '';
+          }
+        }
+      }
     });
   }
 
@@ -114,6 +141,11 @@
 
     const rolePill = document.getElementById('sb-role-pill');
     if (rolePill) rolePill.style.display = 'none';
+
+    // Notify page components to update identity displays
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent('sb-data-updated'));
+    }, 50);
   }
 
   // ── Notification Bell System ───────────────────────────────────────────────
@@ -167,15 +199,18 @@
           <div class="flex flex-col gap-2 pt-1">
             ${notifs.length === 0 ? '<p class="text-xs text-on-surface-variant py-4 text-center">No new notifications</p>' : ''}
             ${notifs.map(n => `
-              <div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-1 ${!n.read ? 'border-l-2 border-primary' : ''}">
+              <div onclick="event.stopPropagation(); window.openNotificationDetailModal('${n.id}')" class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer flex flex-col gap-1 ${!n.read ? 'border-l-2 border-primary bg-primary-fixed/10' : ''}">
                 <div class="flex items-center justify-between">
-                  <span class="font-bold text-xs text-on-surface">${escHtml(n.title)}</span>
-                  <span class="text-[10px] font-data-mono text-outline">${escHtml(n.date)}</span>
+                  <span class="font-bold text-xs text-on-surface truncate">${escHtml(n.title)}</span>
+                  <span class="text-[10px] font-data-mono text-outline shrink-0">${escHtml(n.date)}</span>
                 </div>
-                <p class="text-xs text-on-surface-variant">${escHtml(n.body)}</p>
-                <span class="text-[10px] font-semibold text-secondary flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[12px]">record_voice_over</span> ${escHtml(n.sender)}
-                </span>
+                <p class="text-xs text-on-surface-variant line-clamp-2">${escHtml(n.body)}</p>
+                <div class="flex items-center justify-between pt-0.5">
+                  <span class="text-[10px] font-semibold text-secondary flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[12px]">record_voice_over</span> ${escHtml(n.sender)}
+                  </span>
+                  <span class="text-[10px] font-bold text-primary hover:underline">View details &rarr;</span>
+                </div>
               </div>
             `).join('')}
           </div>
@@ -188,6 +223,87 @@
 
     document.addEventListener('click', () => popup.classList.add('hidden'));
   }
+
+  // ── Global Notification Detail Modal Handler ──────────────────────────────
+  window.openNotificationDetailModal = function(id) {
+    const data = window.SBDynamic ? window.SBDynamic.getData() : { notifications: [] };
+    const notif = (data.notifications || []).find(n => n.id === id);
+    if (!notif) return;
+
+    window.SBDynamic.markNotificationRead(id);
+
+    let modal = document.getElementById('sb-notif-detail-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'sb-notif-detail-modal';
+      modal.className = 'fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-center justify-center p-4';
+      document.body.appendChild(modal);
+    }
+
+    const isIndustry = notif.type === 'industry' || (notif.title && (notif.title.toLowerCase().includes('job') || notif.title.toLowerCase().includes('drive')));
+    const categoryLabel = isIndustry ? 'Industry Placement Drive' : 'Faculty Announcement';
+    const categoryIcon = isIndustry ? 'work' : 'campaign';
+    const categoryColor = isIndustry ? 'bg-primary-container text-on-primary' : 'bg-secondary-container text-on-secondary-container';
+
+    modal.innerHTML = `
+      <div class="bg-surface-container-lowest max-w-lg w-full rounded-2xl p-6 shadow-2xl border border-surface-container-high relative flex flex-col gap-4">
+        <div class="flex items-center justify-between pb-3 border-b border-surface-container-high">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold ${categoryColor}">
+              <span class="material-symbols-outlined text-sm">${categoryIcon}</span>
+              ${escHtml(categoryLabel)}
+            </span>
+            ${notif.acknowledged ? '<span class="bg-emerald-500/20 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded-full">Acknowledged</span>' : ''}
+          </div>
+          <button onclick="window.closeNotificationDetailModal()" class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors cursor-pointer">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+
+        <div class="space-y-2 text-left">
+          <h3 class="font-headline-sm text-lg font-bold text-on-surface leading-snug">${escHtml(notif.title)}</h3>
+          <div class="flex items-center justify-between text-xs text-on-surface-variant font-data-mono pt-1">
+            <span class="flex items-center gap-1 font-semibold text-secondary">
+              <span class="material-symbols-outlined text-sm">verified</span>
+              ${escHtml(notif.sender || 'Faculty / System')}
+            </span>
+            <span>${escHtml(notif.date || 'Just now')}</span>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-surface-container-low border border-surface-container-high/60 text-xs md:text-sm text-on-surface leading-relaxed text-left">
+          ${escHtml(notif.body || notif.message || '')}
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-surface-container-high">
+          <button onclick="window.SBDynamic.deleteNotification('${notif.id}'); window.closeNotificationDetailModal();" class="text-xs text-error font-semibold hover:underline flex items-center gap-1 cursor-pointer">
+            <span class="material-symbols-outlined text-sm">delete</span>
+            Dismiss Alert
+          </button>
+          <div class="flex items-center gap-2">
+            <button onclick="window.closeNotificationDetailModal()" class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-semibold text-xs hover:bg-surface-container-high transition-colors cursor-pointer">Close</button>
+            ${isIndustry ? `
+              <button onclick="window.closeNotificationDetailModal(); const el = document.getElementById('ai-matched-jobs-container'); if(el) el.scrollIntoView({behavior:'smooth'});" class="px-4 py-2 rounded-lg bg-primary text-on-primary font-bold text-xs shadow hover:bg-primary-container transition-all flex items-center gap-1 cursor-pointer">
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                Explore Placement Drive
+              </button>
+            ` : `
+              <button onclick="window.SBDynamic.acknowledgeNotification('${notif.id}'); window.closeNotificationDetailModal(); alert('Notice acknowledged successfully!');" class="px-4 py-2 rounded-lg bg-secondary text-on-secondary font-bold text-xs shadow hover:bg-secondary-fixed transition-all flex items-center gap-1 cursor-pointer">
+                <span class="material-symbols-outlined text-sm">check_circle</span>
+                ${notif.acknowledged ? 'Already Acknowledged' : 'Acknowledge Notice'}
+              </button>
+            `}
+          </div>
+        </div>
+      </div>
+    `;
+    modal.classList.remove('hidden');
+  };
+
+  window.closeNotificationDetailModal = function() {
+    const modal = document.getElementById('sb-notif-detail-modal');
+    if (modal) modal.classList.add('hidden');
+  };
 
   // ── Role Isolation & Access Guard ──────────────────────────────────────────
   function applyRoleAccessIsolation() {
@@ -215,43 +331,28 @@
 
     if (!targetRole) return; // Main landing platform is open
 
-    // If user's role does NOT match page role
-    if (user.role !== targetRole) {
-      // 1. Hide data input drawers and edit panels
-      const drawerSelectors = [
-        '#institution-input-form', '#faculty-input-form', '#recruiter-input-form', '#student-input-form',
-        '[id$="-input-form"]'
-      ];
-      drawerSelectors.forEach(sel => {
-        document.querySelectorAll(sel).forEach(el => {
-          const card = el.closest('.border-amber-500\\/30, .border-emerald-500\\/30, .border-rose-500\\/30, .border-primary-container\\/30, .bg-surface-container-lowest') || el;
-          if (card) card.style.display = 'none';
-        });
-      });
+    // If user's role MATCHES page role, do nothing (keep everything active)
+    if (user.role === targetRole) {
+      const banner = document.getElementById('sb-view-only-banner');
+      if (banner) banner.remove();
+      return;
+    }
 
-      // 2. Hide edit parameter buttons & action triggers
-      const editButtons = document.querySelectorAll('button[onclick*="apply"], button[onclick*="open"], button[onclick*="publish"], button[onclick*="post"]');
-      editButtons.forEach(btn => {
-        if (!btn.closest('#sb-profile-wrapper') && !btn.closest('#sb-notif-popup')) {
-          btn.style.display = 'none';
-        }
-      });
-
-      // 3. Show prominent View-Only Notice Banner at top of page content
-      const main = document.querySelector('main');
-      if (main && !document.getElementById('sb-view-only-banner')) {
-        const banner = document.createElement('div');
-        banner.id = 'sb-view-only-banner';
-        banner.className = 'w-full bg-amber-500/15 border-b border-amber-500/30 text-amber-900 py-3 px-6 font-label-md text-xs font-semibold flex items-center justify-between gap-4 z-40 shadow-sm';
-        banner.innerHTML = `
-          <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-amber-600 text-lg">lock</span>
-            <span><strong>View-Only Isolation Mode:</strong> You are signed up as <strong>${escHtml(user.role.toUpperCase())}</strong> (${escHtml(user.name || 'User')}). Edit parameters and input controls are strictly locked on this portal to <strong>${targetRole.toUpperCase()}</strong> accounts.</span>
-          </div>
-          <a href="${getDepth()}profile_setup/index.html" class="bg-amber-600 text-white px-3 py-1 rounded-md text-[11px] font-bold hover:bg-amber-700 transition-colors">Switch Profile / Role</a>
-        `;
-        main.insertBefore(banner, main.firstChild);
-      }
+    // If user's role does NOT match page role (e.g. Recruiter visiting Student Hub):
+    // Show prominent View-Only Notice Banner at top of page content
+    const main = document.querySelector('main');
+    if (main && !document.getElementById('sb-view-only-banner')) {
+      const banner = document.createElement('div');
+      banner.id = 'sb-view-only-banner';
+      banner.className = 'w-full bg-amber-500/15 border-b border-amber-500/30 text-amber-900 py-3 px-6 font-label-md text-xs font-semibold flex items-center justify-between gap-4 z-40 shadow-sm';
+      banner.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-amber-600 text-lg">lock</span>
+          <span><strong>View-Only Isolation Mode:</strong> You are signed up as <strong>${escHtml(user.role.toUpperCase())}</strong> (${escHtml(user.name || 'User')}). You are currently viewing the <strong>${targetRole.toUpperCase()}</strong> portal.</span>
+        </div>
+        <a href="${getDepth()}profile_setup/index.html" class="bg-amber-600 text-white px-3 py-1 rounded-md text-[11px] font-bold hover:bg-amber-700 transition-colors">Switch Profile / Role</a>
+      `;
+      main.insertBefore(banner, main.firstChild);
     }
   }
 

@@ -148,10 +148,15 @@
     const user = window.SBAuth.getUser();
     if (!user) return data;
 
-    if (user.name && !data.student.name && user.role === 'student') data.student.name = user.name;
-    if (user.name && !data.recruiter.recruiterName && user.role === 'recruiter') data.recruiter.recruiterName = user.name;
-    if (user.name && !data.faculty.facName && user.role === 'faculty') data.faculty.facName = user.name;
-    if (user.name && !data.institution.institutionName && user.role === 'institution') data.institution.institutionName = user.name;
+    if (user.name) {
+      data.student.name = user.name;
+      if (user.role === 'recruiter') data.recruiter.recruiterName = user.name;
+      if (user.role === 'faculty') data.faculty.facName = user.name;
+      if (user.role === 'institution') data.institution.institutionName = user.name;
+    }
+    if (user.avatar) {
+      data.student.avatar = user.avatar;
+    }
     return data;
   }
 
@@ -173,17 +178,38 @@
         data.notifications.unshift({
           id: 'notif-' + Date.now(),
           title: notif.title,
-          body: notif.body,
+          body: notif.body || notif.message || '',
           sender: notif.sender || 'Faculty / System',
           type: notif.type || 'faculty',
           date: 'Just now',
-          read: false
+          read: false,
+          acknowledged: false
         });
       });
     },
     markNotificationsRead: function () {
       this.updateData(data => {
         (data.notifications || []).forEach(n => n.read = true);
+      });
+    },
+    markNotificationRead: function (id) {
+      this.updateData(data => {
+        const notif = (data.notifications || []).find(n => n.id === id);
+        if (notif) notif.read = true;
+      });
+    },
+    deleteNotification: function (id) {
+      this.updateData(data => {
+        data.notifications = (data.notifications || []).filter(n => n.id !== id);
+      });
+    },
+    acknowledgeNotification: function (id) {
+      this.updateData(data => {
+        const notif = (data.notifications || []).find(n => n.id === id);
+        if (notif) {
+          notif.read = true;
+          notif.acknowledged = true;
+        }
       });
     },
     // Job release pipeline
@@ -203,16 +229,16 @@
         data.recruiter.jobs.unshift(newJob);
         data.notifications.unshift({
           id: 'notif-job-' + Date.now(),
-          title: `New Job Released: ${newJob.title}`,
+          title: `New Industry Drive: ${newJob.title}`,
           body: `${newJob.company} released opening for ${newJob.targetRole} (${newJob.stipend}).`,
-          sender: newJob.company,
+          sender: newJob.company + ' (Industry Partner)',
           type: 'industry',
           date: 'Just now',
           read: false
         });
       });
     },
-    // VTU Grade & Marks Engine
+    // VTU Grade & Marks Engine (Credit-Weighted)
     calcVTUGradePoint: function (marks) {
       const m = parseFloat(marks) || 0;
       if (m >= 90) return 10;
@@ -224,25 +250,49 @@
       if (m >= 40) return 4;
       return 0;
     },
-    calcVTUSGPAFromSubjects: function (subjectMarks) {
-      if (!Array.isArray(subjectMarks) || subjectMarks.length === 0) return 8.5;
-      let totalGP = 0;
-      subjectMarks.forEach(m => {
-        totalGP += this.calcVTUGradePoint(m);
+    calcVTUSGPAFromSubjects: function (subjectList) {
+      if (!Array.isArray(subjectList) || subjectList.length === 0) return 8.5;
+      let totalWeightedGP = 0;
+      let totalCredits = 0;
+
+      subjectList.forEach(sub => {
+        if (typeof sub === 'object' && sub !== null) {
+          const marks = parseFloat(sub.marks) || 0;
+          const credits = Math.max(0.5, parseFloat(sub.credits) || 3);
+          const gp = this.calcVTUGradePoint(marks);
+          totalWeightedGP += gp * credits;
+          totalCredits += credits;
+        } else {
+          const marks = parseFloat(sub) || 0;
+          const credits = 3;
+          const gp = this.calcVTUGradePoint(marks);
+          totalWeightedGP += gp * credits;
+          totalCredits += credits;
+        }
       });
-      return Math.round((totalGP / subjectMarks.length) * 100) / 100;
+
+      return totalCredits > 0 ? Math.round((totalWeightedGP / totalCredits) * 100) / 100 : 8.5;
     },
     calcStudent8SemCGPA: function (student) {
       if (student.vtuSubjectsBySem) {
-        let totalSGPA = 0, semCount = 0;
+        let totalWeightedSGPA = 0, totalSemCredits = 0;
         for (let i = 1; i <= 8; i++) {
-          const subMarks = student.vtuSubjectsBySem[`sem${i}`];
-          if (Array.isArray(subMarks) && subMarks.length > 0) {
-            totalSGPA += this.calcVTUSGPAFromSubjects(subMarks);
-            semCount++;
+          const subList = student.vtuSubjectsBySem[`sem${i}`];
+          if (Array.isArray(subList) && subList.length > 0) {
+            const semSGPA = this.calcVTUSGPAFromSubjects(subList);
+            let semCredits = 0;
+            subList.forEach(sub => {
+              if (typeof sub === 'object' && sub !== null) {
+                semCredits += Math.max(0.5, parseFloat(sub.credits) || 3);
+              } else {
+                semCredits += 3;
+              }
+            });
+            totalWeightedSGPA += semSGPA * semCredits;
+            totalSemCredits += semCredits;
           }
         }
-        if (semCount > 0) return Math.round((totalSGPA / semCount) * 100) / 100;
+        if (totalSemCredits > 0) return Math.round((totalWeightedSGPA / totalSemCredits) * 100) / 100;
       }
 
       const s = student.semesters || {};

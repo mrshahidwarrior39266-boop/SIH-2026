@@ -24,34 +24,34 @@
   <div id="student-input-form" class="mt-space-md pt-space-md border-t border-surface-container-high grid grid-cols-1 md:grid-cols-3 gap-space-md">
     <div>
       <label class="block font-label-sm text-on-surface-variant font-bold mb-1">STUDENT NAME</label>
-      <input type="text" id="inp-student-name" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="e.g. Aarav Sharma">
+      <input type="text" id="inp-student-name" style="pointer-events: auto !important; position: relative; z-index: 20;" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:outline-none" placeholder="e.g. Aarav Sharma">
     </div>
     <div>
       <label class="block font-label-sm text-on-surface-variant font-bold mb-1">INSTITUTION</label>
-      <input type="text" id="inp-student-inst" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="e.g. Silver Oak Institute of Tech">
+      <input type="text" id="inp-student-inst" style="pointer-events: auto !important; position: relative; z-index: 20;" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:outline-none" placeholder="e.g. Silver Oak Institute of Tech">
     </div>
     <div>
       <label class="block font-label-sm text-on-surface-variant font-bold mb-1">CGPA (OUT OF 10.0)</label>
-      <input type="number" step="0.1" min="0" max="10" id="inp-student-cgpa" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="8.5">
+      <input type="number" step="0.1" min="0" max="10" id="inp-student-cgpa" style="pointer-events: auto !important; position: relative; z-index: 20;" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:outline-none" placeholder="8.5">
     </div>
     <div>
       <label class="block font-label-sm text-on-surface-variant font-bold mb-1">SKILLS (COMMA SEPARATED)</label>
-      <input type="text" id="inp-student-skills" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="Python, JavaScript, Docker, System Design">
+      <input type="text" id="inp-student-skills" style="pointer-events: auto !important; position: relative; z-index: 20;" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:outline-none" placeholder="Python, JavaScript, Docker, System Design">
     </div>
     <div>
       <label class="block font-label-sm text-on-surface-variant font-bold mb-1">PROBLEM SOLVING SCORE (0-100)</label>
-      <input type="number" min="0" max="100" id="inp-student-prob" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="80">
+      <input type="number" min="0" max="100" id="inp-student-prob" style="pointer-events: auto !important; position: relative; z-index: 20;" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:outline-none" placeholder="80">
     </div>
     <div>
       <label class="block font-label-sm text-on-surface-variant font-bold mb-1">COMMUNICATION SCORE (0-100)</label>
-      <input type="number" min="0" max="100" id="inp-student-comm" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface" placeholder="85">
+      <input type="number" min="0" max="100" id="inp-student-comm" style="pointer-events: auto !important; position: relative; z-index: 20;" class="w-full bg-surface-container-low border border-outline/30 rounded-lg p-2 font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:outline-none" placeholder="85">
     </div>
     <div class="md:col-span-3 flex flex-wrap items-center justify-between gap-2">
-      <button onclick="openSemMarksModal()" class="bg-surface-container-high text-primary font-label-md px-4 py-2.5 rounded-lg font-bold hover:bg-surface-container transition-colors flex items-center gap-1.5">
+      <button onclick="openSemMarksModal()" style="pointer-events: auto !important; position: relative; z-index: 20;" class="bg-surface-container-high text-primary font-label-md px-4 py-2.5 rounded-lg font-bold hover:bg-surface-container transition-colors flex items-center gap-1.5 cursor-pointer">
         <span class="material-symbols-outlined text-base">school</span>
         + Upload 8-Sem Marks &amp; Achievements
       </button>
-      <button onclick="applyStudentDataInputs()" class="bg-primary text-on-primary font-label-md px-6 py-2.5 rounded-lg font-bold shadow hover:bg-primary-container transition-colors flex items-center gap-2">
+      <button onclick="applyStudentDataInputs()" style="pointer-events: auto !important; position: relative; z-index: 20;" class="bg-primary text-on-primary font-label-md px-6 py-2.5 rounded-lg font-bold shadow hover:bg-primary-container transition-colors flex items-center gap-2 cursor-pointer">
         <span class="material-symbols-outlined text-base">analytics</span>
         Calculate &amp; Update Graphs Live
       </button>
@@ -65,12 +65,17 @@
 <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg relative z-10">
 <!-- Student Identity Information -->
 <div class="flex items-start md:items-center gap-space-md">
-<div class="relative shrink-0">
-<img class="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover shadow-sm ring-4 ring-surface-container-low" data-alt="Student profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5XurhhCai0Z8BoncyidwCQyW5YCUTIxJGoGi7ui9c5xfQZOTURSOifS-DLmeGWkmu3N7fGw8uKXGNVWnfx-Ln27OMJvkYAl6btvSwUKsutlaqfZcefhUgHpAHeAE8DibJnYJEsU7ez27-GoJjNf0UDAzNeguN4swrm9n3G1xyr7rtLbdhsfuY11yHTKSGyrQgvqQej17gpwds8ZAM79VrwoSGcCPcP4clBz8wBkI9DNpUB1lEg2ZiKw"/>
-<span class="absolute -bottom-1 -right-1 bg-secondary text-on-secondary rounded-full p-1 flex items-center justify-center shadow-sm">
-<span class="material-symbols-outlined text-[14px]">verified</span>
-</span>
+<div class="relative shrink-0 group cursor-pointer" onclick="triggerAvatarUpload(event)" title="Click to upload profile photo (Max 2 MB)">
+  <img id="student-avatar-img" class="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover shadow-sm ring-4 ring-surface-container-low transition-all group-hover:opacity-80" data-alt="Student profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5XurhhCai0Z8BoncyidwCQyW5YCUTIxJGoGi7ui9c5xfQZOTURSOifS-DLmeGWkmu3N7fGw8uKXGNVWnfx-Ln27OMJvkYAl6btvSwUKsutlaqfZcefhUgHpAHeAE8DibJnYJEsU7ez27-GoJjNf0UDAzNeguN4swrm9n3G1xyr7rtLbdhsfuY11yHTKSGyrQgvqQej17gpwds8ZAM79VrwoSGcCPcP4clBz8wBkI9DNpUB1lEg2ZiKw"/>
+  <div class="absolute inset-0 bg-black/40 rounded-xl flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+    <span class="material-symbols-outlined text-xl">photo_camera</span>
+    <span class="text-[9px] font-bold uppercase tracking-tighter">Upload (Max 2MB)</span>
+  </div>
+  <span class="absolute -bottom-1 -right-1 bg-secondary text-on-secondary rounded-full p-1 flex items-center justify-center shadow-sm z-10">
+    <span class="material-symbols-outlined text-[14px]">verified</span>
+  </span>
 </div>
+<input type="file" id="student-avatar-file-input" accept="image/*" class="hidden" onchange="handleStudentAvatarUpload(event)"/>
 <div class="flex flex-col gap-space-2xs">
 <div class="flex flex-wrap items-center gap-space-xs">
 <span id="student-name" class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Aarav Sharma</span>
@@ -614,6 +619,25 @@ type CircuitBreaker struct {
 </div>
 <!-- Right Column: Active Applications & Live Mentorship (5 cols) -->
 <div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Faculty & Industry Live Alerts Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+  <div class="flex items-center justify-between pb-1 border-b border-surface-container-high">
+    <div class="flex items-center gap-space-xs">
+      <span class="material-symbols-outlined text-secondary">campaign</span>
+      <h3 class="font-title-md text-title-md font-bold text-on-surface">Faculty &amp; Industry Alerts</h3>
+    </div>
+    <button onclick="window.SBDynamic.markNotificationsRead()" class="text-xs text-primary font-semibold hover:underline cursor-pointer">Mark all read</button>
+  </div>
+  <!-- Filter Pills -->
+  <div class="flex items-center gap-1.5 text-[11px] font-bold">
+    <button onclick="filterStudentNotifs('all')" id="notif-flt-all" class="px-2.5 py-1 rounded-md bg-primary text-on-primary transition-colors cursor-pointer">All</button>
+    <button onclick="filterStudentNotifs('faculty')" id="notif-flt-faculty" class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer">Faculty</button>
+    <button onclick="filterStudentNotifs('industry')" id="notif-flt-industry" class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer">Industry</button>
+  </div>
+  <div id="student-live-announcements-feed" class="space-y-2 max-h-64 overflow-y-auto pr-1">
+    <!-- Dynamically rendered Faculty & Industry announcements -->
+  </div>
+</div>
 <!-- Applications Tracker Card -->
 <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
 <div class="flex items-center justify-between">
@@ -816,8 +840,8 @@ type CircuitBreaker struct {
           <span id="active-sem-title" class="font-title-md text-sm font-bold text-on-surface">Semester 1 (10 Core Subjects)</span>
           <span id="active-sem-sgpa" class="bg-secondary-container text-on-secondary-container text-xs font-data-mono font-bold px-2.5 py-1 rounded-full">SGPA: 8.50</span>
         </div>
-        <p class="text-[11px] text-on-surface-variant">Enter marks out of 100 for each of the 10 subjects. VTU Grade Points are computed automatically.</p>
-        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5" id="vtu-10-subject-inputs">
+        <p class="text-[11px] text-on-surface-variant">Enter Subject Name, Credit Points (e.g. 4, 3, 2, 1), and Marks out of 100 for each subject. VTU SGPA is calculated using credit-weighted grade points.</p>
+        <div class="space-y-2 max-h-72 overflow-y-auto pr-1" id="vtu-10-subject-inputs">
           <!-- Dynamically generated 10 subject inputs -->
         </div>
       </div>
@@ -857,6 +881,105 @@ type CircuitBreaker struct {
   let activeVtuSem = 1;
   let vtuMarksStore = {};
 
+  const semDefaultSubjectTemplates = {
+    sem1: [
+      { name: 'Calculus & Linear Algebra', credits: 4, marks: 85 },
+      { name: 'Engineering Physics', credits: 4, marks: 88 },
+      { name: 'Basic Electrical Engg', credits: 3, marks: 82 },
+      { name: 'C Programming for Problem Solving', credits: 4, marks: 90 },
+      { name: 'Technical English', credits: 2, marks: 86 },
+      { name: 'Engineering Physics Lab', credits: 1.5, marks: 92 },
+      { name: 'C Programming Lab', credits: 1.5, marks: 94 },
+      { name: 'Engineering Workshop', credits: 1, marks: 88 },
+      { name: 'Environmental Studies', credits: 1, marks: 84 },
+      { name: 'Constitution & Ethics', credits: 1, marks: 87 }
+    ],
+    sem2: [
+      { name: 'Advanced Calculus & Differential Eqs', credits: 4, marks: 86 },
+      { name: 'Engineering Chemistry', credits: 4, marks: 84 },
+      { name: 'Basic Electronics Engg', credits: 3, marks: 88 },
+      { name: 'Data Structures & Algorithms', credits: 4, marks: 91 },
+      { name: 'Python Programming', credits: 3, marks: 93 },
+      { name: 'Engineering Chemistry Lab', credits: 1.5, marks: 90 },
+      { name: 'Data Structures Lab', credits: 1.5, marks: 95 },
+      { name: 'Computer Aided Drafting', credits: 1, marks: 87 },
+      { name: 'Scientific Foundations of Health', credits: 1, marks: 85 },
+      { name: 'Innovation & Design Thinking', credits: 1, marks: 89 }
+    ],
+    sem3: [
+      { name: 'Discrete Mathematical Structures', credits: 3, marks: 84 },
+      { name: 'Object Oriented Programming (C++)', credits: 4, marks: 89 },
+      { name: 'Computer Organization & Architecture', credits: 4, marks: 86 },
+      { name: 'Operating Systems', credits: 4, marks: 90 },
+      { name: 'Software Engineering', credits: 3, marks: 88 },
+      { name: 'OOP Lab', credits: 1.5, marks: 92 },
+      { name: 'OS Lab', credits: 1.5, marks: 94 },
+      { name: 'Object Oriented Modeling', credits: 2, marks: 87 },
+      { name: 'Social Connect & Responsibility', credits: 1, marks: 85 },
+      { name: 'Universal Human Values', credits: 1, marks: 86 }
+    ],
+    sem4: [
+      { name: 'Complex Analysis & Probability', credits: 3, marks: 85 },
+      { name: 'Database Management Systems', credits: 4, marks: 92 },
+      { name: 'Design & Analysis of Algorithms', credits: 4, marks: 88 },
+      { name: 'Computer Networks', credits: 4, marks: 87 },
+      { name: 'Microprocessors & Controllers', credits: 3, marks: 84 },
+      { name: 'DBMS Lab', credits: 1.5, marks: 95 },
+      { name: 'Algorithms Lab', credits: 1.5, marks: 91 },
+      { name: 'Web Technology Lab', credits: 2, marks: 93 },
+      { name: 'Biology for Engineers', credits: 1, marks: 82 },
+      { name: 'Aptitude & Logical Reasoning', credits: 1, marks: 88 }
+    ],
+    sem5: [
+      { name: 'Management & Entrepreneurship', credits: 3, marks: 86 },
+      { name: 'Automata Theory & Computability', credits: 4, marks: 87 },
+      { name: 'Cloud Computing & Microservices', credits: 4, marks: 94 },
+      { name: 'Artificial Intelligence & ML', credits: 4, marks: 91 },
+      { name: 'Computer Graphics & Visualization', credits: 3, marks: 85 },
+      { name: 'Cloud & DevOps Lab', credits: 1.5, marks: 96 },
+      { name: 'AI & ML Lab', credits: 1.5, marks: 93 },
+      { name: 'Full Stack Web Development Lab', credits: 2, marks: 95 },
+      { name: 'Mini Project / Industrial Seminar', credits: 2, marks: 90 },
+      { name: 'Research Methodology & IPR', credits: 1, marks: 88 }
+    ],
+    sem6: [
+      { name: 'System Design & Distributed Systems', credits: 4, marks: 92 },
+      { name: 'Compiler Design', credits: 4, marks: 84 },
+      { name: 'Big Data Analytics', credits: 3, marks: 89 },
+      { name: 'Cyber Security & Cryptography', credits: 3, marks: 88 },
+      { name: 'DevOps & Containerization', credits: 3, marks: 93 },
+      { name: 'System Design Lab', credits: 1.5, marks: 94 },
+      { name: 'Big Data Lab', credits: 1.5, marks: 91 },
+      { name: 'Mobile App Development', credits: 2, marks: 90 },
+      { name: 'Internship / Technical Seminar', credits: 2, marks: 95 },
+      { name: 'Major Project Phase 1', credits: 2, marks: 94 }
+    ],
+    sem7: [
+      { name: 'High Performance Computing', credits: 4, marks: 90 },
+      { name: 'Blockchain & Smart Contracts', credits: 3, marks: 89 },
+      { name: 'Deep Learning & Neural Networks', credits: 3, marks: 92 },
+      { name: 'Natural Language Processing', credits: 3, marks: 88 },
+      { name: 'Cloud Native Architecture', credits: 3, marks: 94 },
+      { name: 'HPC & Deep Learning Lab', credits: 1.5, marks: 95 },
+      { name: 'Industry Project Phase 2', credits: 4, marks: 96 },
+      { name: 'Technical Elective Seminar', credits: 2, marks: 91 },
+      { name: 'Professional Ethics & Patent Filing', credits: 1, marks: 89 },
+      { name: 'Comprehensive Viva Voce', credits: 1.5, marks: 93 }
+    ],
+    sem8: [
+      { name: 'Enterprise Cloud Security', credits: 3, marks: 92 },
+      { name: 'Edge AI & IoT Architecture', credits: 3, marks: 90 },
+      { name: 'Capstone Industry Project', credits: 10, marks: 96 },
+      { name: 'Industry Internship / Dissertation', credits: 6, marks: 95 },
+      { name: 'Open Elective - Quantum Computing', credits: 3, marks: 88 },
+      { name: 'Open Elective - Financial Tech', credits: 3, marks: 87 },
+      { name: 'Technical Paper Presentation', credits: 2, marks: 94 },
+      { name: 'Research Publication', credits: 2, marks: 93 },
+      { name: 'Grand Viva', credits: 2, marks: 95 },
+      { name: 'Placement Readiness Evaluation', credits: 2, marks: 96 }
+    ]
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
     initStudentDashboard();
     window.addEventListener('sb-data-updated', initStudentDashboard);
@@ -867,24 +990,31 @@ type CircuitBreaker struct {
     const s = data.student;
     if (s.vtuSubjectsBySem) {
       vtuMarksStore = JSON.parse(JSON.stringify(s.vtuSubjectsBySem));
-    } else {
-      vtuMarksStore = {};
+      // Normalize raw arrays to object format
       for (let sem = 1; sem <= 8; sem++) {
-        const baseMarks = Math.min(98, 75 + sem * 2);
-        vtuMarksStore[`sem${sem}`] = [
-          baseMarks, baseMarks + 2, baseMarks - 3, baseMarks + 4, baseMarks,
-          baseMarks - 1, baseMarks + 3, baseMarks + 1, baseMarks - 2, baseMarks + 5
-        ];
+        const key = `sem${sem}`;
+        if (Array.isArray(vtuMarksStore[key])) {
+          vtuMarksStore[key] = vtuMarksStore[key].map((item, idx) => {
+            if (typeof item === 'object' && item !== null) return item;
+            const tpl = (semDefaultSubjectTemplates[key] && semDefaultSubjectTemplates[key][idx]) || { name: `Subject ${idx + 1}`, credits: 3 };
+            return { name: tpl.name, credits: tpl.credits, marks: parseFloat(item) || 85 };
+          });
+        } else {
+          vtuMarksStore[key] = JSON.parse(JSON.stringify(semDefaultSubjectTemplates[key] || []));
+        }
       }
+    } else {
+      vtuMarksStore = JSON.parse(JSON.stringify(semDefaultSubjectTemplates));
     }
   }
 
   function renderVtuSubjectInputs(semNum) {
     activeVtuSem = semNum;
-    if (!vtuMarksStore[`sem${semNum}`]) {
-      vtuMarksStore[`sem${semNum}`] = Array(10).fill(85);
+    const key = `sem${semNum}`;
+    if (!vtuMarksStore[key] || !Array.isArray(vtuMarksStore[key])) {
+      vtuMarksStore[key] = JSON.parse(JSON.stringify(semDefaultSubjectTemplates[key] || []));
     }
-    const marksArr = vtuMarksStore[`sem${semNum}`];
+    const subjects = vtuMarksStore[key];
 
     // Highlight active tab
     for (let i = 1; i <= 8; i++) {
@@ -899,20 +1029,27 @@ type CircuitBreaker struct {
     }
 
     const titleEl = document.getElementById('active-sem-title');
-    if (titleEl) titleEl.textContent = `Semester ${semNum} (10 Core Subjects)`;
+    if (titleEl) titleEl.textContent = `Semester ${semNum} (10 VTU Core Subjects)`;
 
     const inputsContainer = document.getElementById('vtu-10-subject-inputs');
     if (inputsContainer) {
-      const defaultSubjectNames = [
-        'Maths', 'Data Struct', 'Algorithms', 'OS', 'DBMS',
-        'CN', 'Cloud Engg', 'System Design', 'AI/ML', 'Cap Lab'
-      ];
-
-      inputsContainer.innerHTML = marksArr.map((m, idx) => `
-        <div>
-          <label class="block text-[10px] font-bold text-on-surface-variant mb-1 uppercase truncate">${defaultSubjectNames[idx] || 'Sub ' + (idx + 1)}</label>
-          <input type="number" min="0" max="100" value="${m}" oninput="updateVtuSubjectMark(${semNum}, ${idx}, this.value)"
-                 class="w-full bg-surface-container-lowest border border-outline/30 rounded-lg p-1.5 font-data-mono text-xs font-bold text-on-surface text-center" placeholder="85"/>
+      inputsContainer.innerHTML = subjects.map((sub, idx) => `
+        <div class="grid grid-cols-12 gap-2 items-center bg-surface-container-lowest p-2 rounded-lg border border-outline/20">
+          <div class="col-span-6">
+            <label class="block text-[9px] font-bold text-on-surface-variant uppercase truncate">Sub ${idx + 1} Name</label>
+            <input type="text" value="${escHtml(sub.name || '')}" onchange="updateVtuSubjectProp(${semNum}, ${idx}, 'name', this.value)"
+                   class="w-full bg-surface-container-low border border-outline/30 rounded px-2 py-1 text-xs font-semibold text-on-surface" placeholder="Subject Name"/>
+          </div>
+          <div class="col-span-3">
+            <label class="block text-[9px] font-bold text-on-surface-variant uppercase text-center">Credits</label>
+            <input type="number" min="0.5" max="10" step="0.5" value="${sub.credits || 3}" oninput="updateVtuSubjectProp(${semNum}, ${idx}, 'credits', this.value)"
+                   class="w-full bg-surface-container-low border border-outline/30 rounded px-2 py-1 font-data-mono text-xs font-bold text-on-surface text-center"/>
+          </div>
+          <div class="col-span-3">
+            <label class="block text-[9px] font-bold text-on-surface-variant uppercase text-center">Marks / 100</label>
+            <input type="number" min="0" max="100" value="${sub.marks !== undefined ? sub.marks : 85}" oninput="updateVtuSubjectProp(${semNum}, ${idx}, 'marks', this.value)"
+                   class="w-full bg-surface-container-low border border-outline/30 rounded px-2 py-1 font-data-mono text-xs font-bold text-on-surface text-center"/>
+          </div>
         </div>
       `).join('');
     }
@@ -924,29 +1061,30 @@ type CircuitBreaker struct {
     renderVtuSubjectInputs(semNum);
   }
 
-  function updateVtuSubjectMark(semNum, subIdx, value) {
-    const val = Math.min(100, Math.max(0, parseInt(value) || 0));
-    if (!vtuMarksStore[`sem${semNum}`]) vtuMarksStore[`sem${semNum}`] = Array(10).fill(80);
-    vtuMarksStore[`sem${semNum}`][subIdx] = val;
+  function updateVtuSubjectProp(semNum, subIdx, prop, value) {
+    const key = `sem${semNum}`;
+    if (!vtuMarksStore[key]) vtuMarksStore[key] = JSON.parse(JSON.stringify(semDefaultSubjectTemplates[key] || []));
+    if (!vtuMarksStore[key][subIdx]) return;
+
+    if (prop === 'marks') {
+      vtuMarksStore[key][subIdx].marks = Math.min(100, Math.max(0, parseFloat(value) || 0));
+    } else if (prop === 'credits') {
+      vtuMarksStore[key][subIdx].credits = Math.max(0.5, parseFloat(value) || 1);
+    } else if (prop === 'name') {
+      vtuMarksStore[key][subIdx].name = value.trim() || `Subject ${subIdx + 1}`;
+    }
     recalcVtuLiveSummary();
   }
 
   function recalcVtuLiveSummary() {
     // Current semester SGPA
-    const curMarks = vtuMarksStore[`sem${activeVtuSem}`] || [];
-    const sgpa = window.SBDynamic.calcVTUSGPAFromSubjects(curMarks);
+    const curList = vtuMarksStore[`sem${activeVtuSem}`] || [];
+    const sgpa = window.SBDynamic.calcVTUSGPAFromSubjects(curList);
     const sgpaEl = document.getElementById('active-sem-sgpa');
     if (sgpaEl) sgpaEl.textContent = `Sem ${activeVtuSem} SGPA: ${sgpa.toFixed(2)}`;
 
     // Overall 8-sem CGPA & Percentage
-    let totalSGPA = 0, semCount = 0;
-    for (let sem = 1; sem <= 8; sem++) {
-      if (vtuMarksStore[`sem${sem}`]) {
-        totalSGPA += window.SBDynamic.calcVTUSGPAFromSubjects(vtuMarksStore[`sem${sem}`]);
-        semCount++;
-      }
-    }
-    const cgpa = semCount > 0 ? Math.round((totalSGPA / semCount) * 100) / 100 : 8.5;
+    const cgpa = window.SBDynamic.calcStudent8SemCGPA({ vtuSubjectsBySem: vtuMarksStore });
     const pct = window.SBDynamic.calcVTUPercentage(cgpa);
 
     const cgpaEl = document.getElementById('vtu-live-cgpa');
@@ -957,29 +1095,41 @@ type CircuitBreaker struct {
   }
 
   function openSemMarksModal() {
-    initVtuMarksStore();
-    renderVtuSubjectInputs(1);
+    try {
+      initVtuMarksStore();
+      renderVtuSubjectInputs(1);
 
-    const data = window.SBDynamic.getData();
-    if (document.getElementById('achievements-inp')) {
-      document.getElementById('achievements-inp').value = Array.isArray(data.student.achievements)
-        ? data.student.achievements.join(', ')
-        : (data.student.achievements || '');
+      const data = window.SBDynamic ? window.SBDynamic.getData() : { student: {} };
+      if (document.getElementById('achievements-inp')) {
+        document.getElementById('achievements-inp').value = Array.isArray(data.student.achievements)
+          ? data.student.achievements.join(', ')
+          : (data.student.achievements || '');
+      }
+    } catch (e) {
+      console.warn('Modal init warning:', e);
     }
-    document.getElementById('semMarksModal')?.classList.remove('hidden');
+    const modal = document.getElementById('semMarksModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.style.display = 'flex';
+    }
   }
 
   function closeSemMarksModal() {
-    document.getElementById('semMarksModal')?.classList.add('hidden');
+    const modal = document.getElementById('semMarksModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.style.display = 'none';
+    }
   }
 
   function saveSemMarksAndAchievements() {
     const ach = document.getElementById('achievements-inp')?.value.trim() || '';
 
-    // Calculate SGPAs across all 8 sem
+    // Calculate SGPAs across all 8 sems
     const semSGPAs = [];
     for (let sem = 1; sem <= 8; sem++) {
-      const arr = vtuMarksStore[`sem${sem}`] || Array(10).fill(80);
+      const arr = vtuMarksStore[`sem${sem}`] || semDefaultSubjectTemplates[`sem${sem}`];
       semSGPAs.push(window.SBDynamic.calcVTUSGPAFromSubjects(arr));
     }
     const overallCGPA = window.SBDynamic.calcStudent8SemCGPA({ vtuSubjectsBySem: vtuMarksStore, semesters: semSGPAs });
@@ -996,23 +1146,105 @@ type CircuitBreaker struct {
     alert(`VTU 8-Semester Marks Saved Successfully!\n\nCalculated CGPA: ${overallCGPA.toFixed(2)}\nVTU Percentage: ${window.SBDynamic.calcVTUPercentage(overallCGPA).toFixed(1)}%`);
   }
 
+  function triggerAvatarUpload(e) {
+    if (e) e.stopPropagation();
+    const input = document.getElementById('student-avatar-file-input');
+    if (input) input.click();
+  }
+
+  function handleStudentAvatarUpload(event) {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+
+    // Enforce 2 MB maximum size limit
+    const MAX_SIZE_MB = 2;
+    const MAX_SIZE_BYTES = MAX_SIZE_MB * 1024 * 1024;
+
+    if (file.size > MAX_SIZE_BYTES) {
+      const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
+      alert(`⚠️ Image File Size Exceeds Limit!\n\nYour file size: ${sizeMB} MB\nMaximum allowed limit: ${MAX_SIZE_MB} MB\n\nPlease select an image file under 2 MB.`);
+      event.target.value = '';
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const dataUrl = e.target.result;
+
+      // 1. Update image src on identity card
+      const img = document.getElementById('student-avatar-img');
+      if (img) img.src = dataUrl;
+
+      // 2. Update header avatars
+      document.querySelectorAll('#sb-user-area img, img[alt="Profile"]').forEach(h => h.src = dataUrl);
+
+      // 3. Update user object in SBAuth
+      if (window.SBAuth && window.SBAuth.getUser) {
+        const user = window.SBAuth.getUser();
+        if (user) {
+          user.avatar = dataUrl;
+          localStorage.setItem('sb_user', JSON.stringify(user));
+        }
+      }
+
+      // 4. Update SBDynamic state & trigger event
+      window.SBDynamic.updateData(data => {
+        data.student.avatar = dataUrl;
+      });
+
+      alert('✅ Profile photo updated successfully!');
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function getActiveUserName() {
+    try {
+      if (window.SBAuth && window.SBAuth.getUser) {
+        const u = window.SBAuth.getUser();
+        if (u && u.name) return u.name;
+      }
+      const raw = localStorage.getItem('sb_user');
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed && parsed.name) return parsed.name;
+      }
+    } catch (e) {}
+    const data = window.SBDynamic ? window.SBDynamic.getData() : null;
+    return (data && data.student && data.student.name && data.student.name !== 'Aarav Sharma') ? data.student.name : 'Student Profile';
+  }
+
   function initStudentDashboard() {
-    const data = window.SBDynamic.getData();
-    const s = data.student;
-    const r = data.recruiter;
+    const data = window.SBDynamic ? window.SBDynamic.getData() : { student: {}, recruiter: {} };
+    const s = data.student || {};
+    const r = data.recruiter || {};
+
+    const displayName = getActiveUserName();
+    const displayInst = s.institution || 'Silver Oak Institute of Tech';
+    const displayDept = s.department || 'B.Tech Computer Science & Engineering';
+    const displayYear = s.year || 4;
+    const user = window.SBAuth && window.SBAuth.isLoggedIn() ? window.SBAuth.getUser() : null;
+    const displayAvatar = (user && user.avatar) || s.avatar;
 
     // Fill form inputs with current values
-    if (document.getElementById('inp-student-name')) document.getElementById('inp-student-name').value = s.name || '';
-    if (document.getElementById('inp-student-inst')) document.getElementById('inp-student-inst').value = s.institution || '';
+    if (document.getElementById('inp-student-name')) document.getElementById('inp-student-name').value = displayName;
+    if (document.getElementById('inp-student-inst')) document.getElementById('inp-student-inst').value = displayInst;
     if (document.getElementById('inp-student-cgpa')) document.getElementById('inp-student-cgpa').value = s.cgpa || '';
     if (document.getElementById('inp-student-skills')) document.getElementById('inp-student-skills').value = (s.skills || []).join(', ');
     if (document.getElementById('inp-student-prob')) document.getElementById('inp-student-prob').value = s.probSolving || 80;
     if (document.getElementById('inp-student-comm')) document.getElementById('inp-student-comm').value = s.commScore || 85;
 
-    // Render header identity elements
-    if (document.getElementById('student-name') && s.name) document.getElementById('student-name').textContent = s.name;
-    if (document.getElementById('student-inst-name') && s.institution) document.getElementById('student-inst-name').textContent = s.institution;
+    // Render identity card elements matching logged-in user credentials
+    if (document.getElementById('student-name')) document.getElementById('student-name').textContent = displayName;
+    if (document.getElementById('student-inst-name')) document.getElementById('student-inst-name').textContent = displayInst;
     if (document.getElementById('student-cgpa-val')) document.getElementById('student-cgpa-val').textContent = s.cgpa || '0.0';
+    if (document.getElementById('student-dept-year')) document.getElementById('student-dept-year').textContent = `${displayDept} • ${displayYear}th Year`;
+    if (document.getElementById('student-avatar-img') && displayAvatar) {
+      document.getElementById('student-avatar-img').src = displayAvatar;
+    }
+    if (document.getElementById('student-id-badge')) {
+      const idVal = user && user.id ? user.id : '8841';
+      document.getElementById('student-id-badge').textContent = `ID: SB-2026-${idVal.toString().padStart(4, '0')}`;
+    }
 
     // Calculate Placement Readiness
     const readiness = window.SBDynamic.calcStudentReadiness(s);
@@ -1036,6 +1268,70 @@ type CircuitBreaker struct {
       targetRoleText.textContent = latestJob.targetRole;
     }
 
+    // Render Faculty & Industry Live Announcements Feed
+    renderStudentAlertsFeed(data.notifications || []);
+    renderMatchedJobs(r);
+  }
+
+  let currentNotifFilter = 'all';
+
+  function filterStudentNotifs(type) {
+    currentNotifFilter = type;
+    ['all', 'faculty', 'industry'].forEach(t => {
+      const btn = document.getElementById(`notif-flt-${t}`);
+      if (btn) {
+        if (t === type) {
+          btn.className = 'px-2.5 py-1 rounded-md bg-primary text-on-primary transition-colors cursor-pointer';
+        } else {
+          btn.className = 'px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer';
+        }
+      }
+    });
+    const data = window.SBDynamic.getData();
+    renderStudentAlertsFeed(data.notifications || []);
+  }
+
+  function renderStudentAlertsFeed(notifs) {
+    const feedContainer = document.getElementById('student-live-announcements-feed');
+    if (!feedContainer) return;
+
+    let filtered = notifs;
+    if (currentNotifFilter === 'faculty') {
+      filtered = notifs.filter(n => n.type === 'faculty' || (n.sender && n.sender.toLowerCase().includes('faculty')));
+    } else if (currentNotifFilter === 'industry') {
+      filtered = notifs.filter(n => n.type === 'industry' || (n.title && n.title.toLowerCase().includes('job')));
+    }
+
+    if (filtered.length === 0) {
+      feedContainer.innerHTML = '<p class="text-xs text-on-surface-variant py-4 text-center">No notifications in this category</p>';
+      return;
+    }
+
+    feedContainer.innerHTML = filtered.map(n => {
+      const isUnread = !n.read;
+      const isAck = n.acknowledged;
+      return `
+        <div onclick="window.openNotificationDetailModal('${n.id}')" class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container-high/60 flex flex-col gap-1 hover:bg-surface-container transition-colors cursor-pointer relative ${isUnread ? 'border-l-4 border-l-primary bg-primary-fixed/10' : ''}">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-xs text-on-surface truncate pr-2">${escHtml(n.title)}</span>
+            <span class="text-[10px] font-data-mono text-outline shrink-0">${escHtml(n.date || 'Just now')}</span>
+          </div>
+          <p class="text-xs text-on-surface-variant line-clamp-2 leading-snug">${escHtml(n.body)}</p>
+          <div class="flex items-center justify-between pt-1">
+            <span class="text-[10px] font-semibold text-secondary flex items-center gap-1">
+              <span class="material-symbols-outlined text-[12px]">record_voice_over</span> ${escHtml(n.sender || 'Faculty / Industry')}
+            </span>
+            <div class="flex items-center gap-1">
+              ${isAck ? '<span class="text-[9px] font-bold text-emerald-600 bg-emerald-500/10 px-1.5 py-0.5 rounded">Acknowledged</span>' : ''}
+              <span class="text-[10px] font-bold text-primary hover:underline flex items-center gap-0.5">Details <span class="material-symbols-outlined text-[12px]">open_in_new</span></span>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function renderMatchedJobs(r) {
     // Dynamically render Industry Job Releases in AI Matched Internships container
     const jobsContainer = document.getElementById('ai-matched-jobs-container');
     if (jobsContainer && r.jobs && r.jobs.length) {
@@ -1080,6 +1376,12 @@ type CircuitBreaker struct {
         `;
       }).join('');
     }
+  }
+
+  function escHtml(str) {
+    return String(str || '')
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
   }
 
   function applyStudentDataInputs() {
