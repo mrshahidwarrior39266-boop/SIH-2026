@@ -7,12 +7,16 @@ const { DatabaseSync } = require('node:sqlite');
 const path = require('path');
 const fs   = require('fs');
 
-const DB_DIR     = path.join(__dirname, '..', 'database');
+const IS_VERCEL  = process.env.VERCEL || process.env.VERCEL_ENV;
+const LOCAL_DB_DIR = path.join(__dirname, '..', 'database');
+const DB_DIR     = IS_VERCEL ? '/tmp' : LOCAL_DB_DIR;
 const DB_PATH    = path.join(DB_DIR, 'skillbridge.db');
-const SCHEMA_PATH = path.join(DB_DIR, 'schema.sql');
+const SCHEMA_PATH = path.join(LOCAL_DB_DIR, 'schema.sql');
 
-// Ensure database directory exists
-if (!fs.existsSync(DB_DIR)) fs.mkdirSync(DB_DIR, { recursive: true });
+// Ensure database directory exists locally
+if (!IS_VERCEL && !fs.existsSync(DB_DIR)) {
+  fs.mkdirSync(DB_DIR, { recursive: true });
+}
 
 const db = new DatabaseSync(DB_PATH);
 
