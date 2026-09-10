@@ -56,12 +56,16 @@ app.get('/api/health', (_req, res) => {
 });
 
 // ── START ─────────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log('\n╔════════════════════════════════════════╗');
-  console.log(`║  SkillBridge Backend  v1.0.0           ║`);
-  console.log('╠════════════════════════════════════════╣');
-  console.log(`║  API:    http://localhost:${PORT}/api      ║`);
-  console.log(`║  Health: http://localhost:${PORT}/api/health  ║`);
-  console.log(`║  Google: http://localhost:${PORT}/api/auth/google ║`);
-  console.log('╚════════════════════════════════════════╝\n');
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log('\n╔════════════════════════════════════════╗');
+    console.log(`║  SkillBridge Backend  v1.0.0           ║`);
+    console.log('╠════════════════════════════════════════╣');
+    console.log(`║  API:    http://localhost:${PORT}/api      ║`);
+    console.log(`║  Health: http://localhost:${PORT}/api/health  ║`);
+    console.log(`║  Google: http://localhost:${PORT}/api/auth/google ║`);
+    console.log('╚════════════════════════════════════════╝\n');
+  });
+}
+
+module.exports = app;
